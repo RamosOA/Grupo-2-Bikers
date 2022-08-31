@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link href="/css/stylesheet.css" rel="stylesheet">
+</head>
+<body>
+    <h1 class="register">Registro</h1>
+    <p class="leyend">Por favor ingrese la información requerida para el registro</p>
+    <form action="">
+        <fieldset>
+            <label>Nombres <input type="text" required name="name"></label>
+            <label>Apellindos <input type="text" required name="last-name"></label>
+            <label>Email <input type="email" required name="email"></label>
+            <label>Contraseña <input type="password" required name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" ></label>
+            <!--pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+  title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters">
+ SIRVE PARA PONER OBLIGATORIO NUMERO, UPPER Y LOWERCASE-->
+        </fieldset>
+        <fieldset>
+            <label><input class="inline" type="checkbox" required name="terms"> Acepto los <a href="#">Términos y Condiciones</a></label>
+        </fieldset>
+        <fieldset></fieldset>
+        <input type="submit" value="Submit">
+        
+    </form>
+    
+</body>
+</html>
