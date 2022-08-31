@@ -45,7 +45,11 @@ select {
     margin: 0 0.5em 0 0;
     vertical-align:middle;
 }
- 
+
+a{
+    color:black
+}
+
 input[type="submit"] {
     display: block;
     width: 60%;
@@ -55,4 +59,6 @@ input[type="submit"] {
     background-color: #3b3b4f;
     border-color: white;
     min-width: 300px;
+    
 }
+

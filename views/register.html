@@ -14,7 +14,7 @@
         <fieldset>
             <label>Nombres <input type="text" required name="name"></label>
             <label>Apellindos <input type="text" required name="last-name"></label>
-            <label>Email <input type="email" required name="email"></label>
+            <label>Email <input type="email" required name="email" placeholder="@domain.com"></label>
             <label>Contraseña <input type="password" required name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" ></label>
             <!--pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
   title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters">
@@ -23,7 +23,7 @@
         <fieldset>
             <label><input class="inline" type="checkbox" required name="terms"> Acepto los <a href="#">Términos y Condiciones</a></label>
         </fieldset>
-        <fieldset></fieldset>
+        <!--<fieldset></fieldset>-->
         <input type="submit" value="Submit">
         
     </form>
