@@ -6,27 +6,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
     <link href="/css/stylesheet.css" rel="stylesheet">
+    <link href="/css/stylesheethome.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2f477f726e.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+    <header>
+        <img class="logo" width="200" height="200" src="/img/logo.jpeg" alt="logo">
+        </nav>
+       <div clase="nav-bar-and-search-bar">
+         <nav class="nav-bar">
+             <ul>
+                <li> <a href="/contactanos">Contactanos</a></li>
+                <li><a href="/register">Registrar</a></li>
+                <li><a href="/login">Login</a></li>
+             </ul>
+          
+         </nav>
+         <form action="" class="search-bar">
+            <input type="search" placeholder="buscar">
+            
+         </form>
+         <i class="fa-solid fa-cart-shopping"></i>
+
+        </div>
+    </header>
+    <nav class="categorias">
+        <ul>
+            <li> <a href="/">Inicio</a></li>
+            <li> <a href="/detalleDeProducto">Accesorios</a> </li>
+            <li><a href="/detalleDeProducto">Cascos</a></li>
+            <li><a href="/detalleDeProducto">Vestuarios</a></li>
+            <li><a href="/detalleDeProducto">Botas</a></li>
+            <li><a href="/detalleDeProducto">Maletas</a></li>
+            <li><a href="/detalleDeProducto">Guantes</a></li>
+            <li><a href="/detalleDeProducto">Ofertas</a></li>
+        </ul>
+    </nav>
+    <main>
     <h1 class="register">Registro</h1>
     <p class="leyend">Por favor ingrese la información requerida para el registro</p>
-    <form action="">
+    <form action="/" method="post">
         <fieldset>
             <label>Nombres <input type="text" required name="name"></label>
             <label>Apellindos <input type="text" required name="last-name"></label>
             <label>Email <input type="email" required name="email" placeholder="@domain.com"></label>
             <label>Contraseña <input type="password" required name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" ></label>
+            <label>Confirmar Contraseña <input type="password" required name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" ></label>
             <!--pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-  title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters">
- SIRVE PARA PONER OBLIGATORIO NUMERO, UPPER Y LOWERCASE-->
+title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters">
+SIRVE PARA PONER OBLIGATORIO NUMERO, UPPER Y LOWERCASE-->
         </fieldset>
         <fieldset>
             <label><input class="inline" type="checkbox" required name="terms"> Acepto los <a href="#">Términos y Condiciones</a></label>
         </fieldset>
         <!--<fieldset></fieldset>-->
-        <input type="submit" value="Submit">
+        <input type="submit" value="Enviar">
         
     </form>
-    
+</main> 
+<footer class="footer">
+    <div class="lodearriba">
+        <div class="contacto">
+            <h3>Contactanos</h3>
+            <h5>Calle x #xx-xx Antioquia, Colombia</h5>
+            <h5>Telefono: 3d3 5d6 d456 - 604-531 d655</h5>
+            <h5>Correo: nuestrocorreo@losmejores.com</h5>
+        </div>
+
+        <div class="mascategorias">
+            <h3>Categorías</h3>
+            <div class="categoriasen2columnas">
+                <ul>
+                    <li> <a href="/">Inicio</a></li>
+                    <li> <a href="/detalleDeProducto">Accesorios</a> </li>
+                    <li><a href="/detalleDeProducto">Cascos</a></li>
+                    <li><a href="/detalleDeProducto">Vestuarios</a></li>
+                </ul>
+                <ul>
+
+                    <li><a href="/detalleDeProducto">Botas</a></li>
+                    <li><a href="/detalleDeProducto">Maletas</a></li>
+                    <li><a href="/detalleDeProducto">Guantes</a></li>
+                    <li><a href="/detalleDeProducto">Ofertas</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="redessociales">
+            <h3>Nos encuentras tambien en:</h3>
+            <div class="redeslogos">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="lodeabajo">
+        <p class="privacidad">Toda la información de este sitio es propiedad del sitio por lo tanto, no se puede
+            modificar, copiar, extraer o utilizar de otra manera sin el consentimiento expreso previo y por escrito.
+            Por lo tanto, al acceder a www.bikersclub.com, el usuario es consciente de que el mal uso de esta
+            información puede resultar en sanciones civiles y penales</p>
+    </div>
+
+</footer>
 </body>
 </html>

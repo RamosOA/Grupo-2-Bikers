@@ -20,8 +20,7 @@ app.get(("/register"), (req, res) => {
     res.sendFile(path.join(__dirname, "/views/register.html"));
 });
 
-
-//* npm install nodemon 
-// npm start
-// en el navegador pongo Localhost:3000
+app.get(("/login"), (req, res) => {
+    res.sendFile(path.join(__dirname, "/views/login.html"));
+});
 

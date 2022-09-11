@@ -150,7 +150,7 @@ footer{
     margin-bottom: 100px;
 }
 
-@media (max-width:480px){
+@media (max-width:620px){
 
     .nav-bar ul{
         list-style: none;
@@ -199,5 +199,5 @@ footer{
         justify-content: center;
     
     }
-
+}
 
