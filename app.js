@@ -19,3 +19,7 @@ app.get(("/home/contact"), (req, res) => {
 app.get(("/home/register"), (req, res) => {
     res.sendFile(path.join(__dirname, "/views/register.html"));
 });
+
+app.get(("/home/login"), (req, res) => {
+    res.sendFile(path.join(__dirname, "/views/login.html"));
+});
