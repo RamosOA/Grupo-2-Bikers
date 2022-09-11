@@ -37,13 +37,18 @@ fieldset{
     padding: 2rem 0;
     border-bottom: 3px solid #3b3b4f
 }
- 
+
+.contenedor-login{
+    border: none;
+    padding: 2rem 0;
+
+}
 input,
 textarea,
 select {
-   margin: 10px 0 0 0;
-   width: 100%;
-   min-height: 2em;
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 2em;
 }
  
 .inline {
@@ -65,7 +70,7 @@ input[type="submit"] {
     background-color: #3b3b4f;
     border-color: white;
     min-width: 300px;
-    /* color:white; */
+    color:white;
     
 }
 

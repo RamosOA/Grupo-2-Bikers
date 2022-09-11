@@ -8,6 +8,7 @@
     <title>Login</title>
     <link href="/css/stylesheet.css" rel="stylesheet">
     <link href="/css/stylesheethome.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2f477f726e.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -33,11 +34,23 @@
         </div>
 
     </header>
+    <nav class="categorias">
+        <ul>
+            <li> <a href="/">Inicio</a></li>
+            <li> <a href="/detalleDeProducto">Accesorios</a> </li>
+            <li><a href="/detalleDeProducto">Cascos</a></li>
+            <li><a href="/detalleDeProducto">Vestuarios</a></li>
+            <li><a href="/detalleDeProducto">Botas</a></li>
+            <li><a href="/detalleDeProducto">Maletas</a></li>
+            <li><a href="/detalleDeProducto">Guantes</a></li>
+            <li><a href="/detalleDeProducto">Ofertas</a></li>
+        </ul>
+    </nav>
     <main>
         <h1 class="ingreso">Ingreso</h1>
         <p class="leyend">Hola! ingresa tus credenciales para acceder a tu cuenta</p>
         <form action="/" method="POST">
-            <fieldset>
+            <fieldset class="contenedor-login">
                 <label for="usuario">Usuario</label>
                 <input type="text" id="usuario" name="name" required>
                 <label>Contraseña <input type="password" required name="password"
