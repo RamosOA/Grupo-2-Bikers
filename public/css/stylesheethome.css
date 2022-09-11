@@ -1,0 +1,152 @@
+:root {
+    --primaryFont: 'Arial', sans-serif;
+    --secondaryFont:'Lobster', cursive;
+    --sm: 16px;
+    --md: 18px;
+    --lg: 24px;
+    --ssm: 12px;
+    --fondo: #666;
+    --titulos: white;
+    --parrafos: #1259c3;
+    --botones: #666;
+    --encabezado: black;
+    --categorias: black;
+}
+
+
+body{
+    background-color: var(--fondo);
+}
+
+
+
+header{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    justify-content: space-around;
+    font-family: var(--primaryFont);
+    background-color: var(--encabezado);
+}
+
+
+.logo{
+    min-width: 200px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.nav-bar ul{
+    display: flex;
+}
+
+.nav-bar li{
+    list-style: none;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 20px;
+}
+
+.nav-bar a{
+    text-decoration: none;
+    font-weight: bold;
+    font-family: var(--primaryFont);
+    color: var(--titulos)
+}
+
+.search-bar{
+    
+    background-color: white;
+    opacity: 0.5;
+    align-items: rigth;
+    
+    margin: 0;
+}
+
+
+.fa-cart-shopping{
+    color: white;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin: 20px;
+}
+
+
+.categorias{
+    background-color: var(--categorias);
+}
+.categorias ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.categorias li{
+    
+    list-style: none;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 20px;;
+}
+
+.categorias a{
+    text-decoration: none;
+    font-weight: bold;
+    font-family: var(--primaryFont);
+    color: var(--titulos);
+
+}
+
+footer{
+    
+    margin: 10px;
+    font-family: var(--primaryFont);
+    background-color: var(--encabezado);
+}
+
+.lodearriba{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: white;
+}
+
+
+.mascategorias{
+    background-color: var(--categorias);
+}
+
+.categoriasen2columnas{
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.categoriasen2columnas ul{
+    padding: 0%;
+    margin: 0%;
+}
+
+
+.mascategorias li{  
+    list-style: none;
+    margin: 20px;
+    padding: 0%;
+    margin-left: 0;
+}
+
+.mascategorias a{
+    text-decoration: none;
+    font-weight: bold;
+    font-family: var(--primaryFont);
+    color: var(--titulos);
+
+}
+
+.lodeabajo{
+   
+    color: white;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
