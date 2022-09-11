@@ -56,25 +56,25 @@ header{
 }
 
 .search-bar{
-    
-    background-color: white;
     opacity: 0.5;
-    align-items: rigth;
+    margin-left: 150px;
     
-    margin: 0;
 }
 
 
 .fa-cart-shopping{
+    display: flex;
     color: white;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    margin: 20px;
+    margin-left: 300px;
+    margin-top: 10px;
+    
 }
 
 
 .categorias{
     background-color: var(--categorias);
+    margin: 10px;
+
 }
 .categorias ul{
     display: flex;
@@ -149,4 +149,55 @@ footer{
     text-align: center;
     margin-bottom: 100px;
 }
+
+@media (max-width:480px){
+
+    .nav-bar ul{
+        list-style: none;
+        flex-wrap: wrap;
+        flex-direction: column;
+        text-align: end;
+        margin: 2px;
+    }
+    .search-bar{
+        opacity: 0.5;
+        margin-left: 10px;
+        
+    }
+
+    .fa-cart-shopping{
+        display: flex;
+        color: white;
+        margin-left: 150px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .nav-bar li{
+        
+        margin: 10px;
+    }
+    .categorias ul{
+        display: flex;
+    }
+    .categorias li{
+        
+        list-style: none;
+        justify-content: flex-start;
+        margin: 5px;;
+    }
+
+    .lodearriba{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        color: white;
+        text-align: center;
+    }
+    .categoriasen2columnas{
+        display: flex;
+        justify-content: center;
+    
+    }
+
 
