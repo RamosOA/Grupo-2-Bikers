@@ -2,23 +2,29 @@ body {
     width: 100%;
     height: 100vh;
     margin: 0;
-    background-color: #1b1b32;
+    /* background-color: #1b1b32; */
     color: #f5f6f7;
     font-family: Tahoma;
     font-size: 16px;
 }
- 
-.register, .leyend{
-    margin: 1em auto;
+
+main{
+    margin: 10px;
+    background-color: var(--encabezado)
+}
+.register, .leyend, .ingreso{
+    padding: 10px;
+    margin: 0 auto;
     text-align: center;
 }
- 
+
 form {
     width: 60vw;
     max-width: 500px;
     min-width: 300px;
     margin: 0 auto;
     padding-bottom: 2em;
+    
 }
  
 label {
@@ -31,13 +37,18 @@ fieldset{
     padding: 2rem 0;
     border-bottom: 3px solid #3b3b4f
 }
- 
+
+.contenedor-login{
+    border: none;
+    padding: 2rem 0;
+
+}
 input,
 textarea,
 select {
-   margin: 10px 0 0 0;
-   width: 100%;
-   min-height: 2em;
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 2em;
 }
  
 .inline {
@@ -47,7 +58,7 @@ select {
 }
 
 a{
-    color:black
+    color: white
 }
 
 input[type="submit"] {
@@ -59,6 +70,7 @@ input[type="submit"] {
     background-color: #3b3b4f;
     border-color: white;
     min-width: 300px;
+    color:white;
     
 }
 
