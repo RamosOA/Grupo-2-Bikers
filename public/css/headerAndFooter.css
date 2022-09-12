@@ -1,12 +1,14 @@
 :root {
-    --primaryFont: 'Arial', sans-serif;
+    --primaryFont: 'Calibri', sans-serif;
     --secondaryFont:'Lobster', cursive;
+    --font-size: 23px;
+    --font-weight: lighter;
     --sm: 16px;
     --md: 18px;
     --lg: 24px;
     --ssm: 12px;
     --fondo: #666;
-    --titulos: white;
+    --titulos: rgb(203, 199, 199);
     --parrafos: #1259c3;
     --botones: #666;
     --encabezado: black;
@@ -27,6 +29,8 @@ header{
     justify-content: space-around;
     font-family: var(--primaryFont);
     background-color: var(--encabezado);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
 }
 
 
@@ -52,7 +56,10 @@ header{
     text-decoration: none;
     font-weight: bold;
     font-family: var(--primaryFont);
-    color: var(--titulos)
+    color: var(--titulos);
+    font-family: var(--primaryFont);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
 }
 
 .search-bar{
@@ -64,9 +71,12 @@ header{
 
 .fa-cart-shopping{
     display: flex;
-    color: white;
+    color: var(--titulos);
+    font-family: var(--primaryFont);
     margin-left: 300px;
     margin-top: 10px;
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
     
 }
 
@@ -93,6 +103,8 @@ header{
     font-weight: bold;
     font-family: var(--primaryFont);
     color: var(--titulos);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
 
 }
 
@@ -101,6 +113,8 @@ footer{
     margin: 10px;
     font-family: var(--primaryFont);
     background-color: var(--encabezado);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
 }
 
 .lodearriba{
@@ -108,12 +122,23 @@ footer{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    color: white;
+    color: var(--titulos);
 }
 
+h3{
+   
+    font-weight: var(--font-weight);
+}
+h5{
+    
+    font-weight: var(--font-weight);
+}
 
 .mascategorias{
     background-color: var(--categorias);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+
 }
 
 .categoriasen2columnas{
@@ -125,6 +150,9 @@ footer{
 .categoriasen2columnas ul{
     padding: 0%;
     margin: 0%;
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+   
 }
 
 
@@ -133,6 +161,7 @@ footer{
     margin: 20px;
     padding: 0%;
     margin-left: 0;
+    font-weight: var(--font-weight);
 }
 
 .mascategorias a{
@@ -140,63 +169,16 @@ footer{
     font-weight: bold;
     font-family: var(--primaryFont);
     color: var(--titulos);
+    font-weight: var(--font-weight);
+    font-size: 20px;
 
 }
 
 .lodeabajo{
    
-    color: white;
+    color: rgb(158, 156, 156);
     text-align: center;
     margin-bottom: 100px;
-}
-
-@media (max-width:620px){
-
-    .nav-bar ul{
-        list-style: none;
-        flex-wrap: wrap;
-        flex-direction: column;
-        text-align: end;
-        margin: 2px;
-    }
-    .search-bar{
-        opacity: 0.5;
-        margin-left: 10px;
-        
-    }
-
-    .fa-cart-shopping{
-        display: flex;
-        color: white;
-        margin-left: 150px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    .nav-bar li{
-        
-        margin: 10px;
-    }
-    .categorias ul{
-        display: flex;
-    }
-    .categorias li{
-        
-        list-style: none;
-        justify-content: flex-start;
-        margin: 5px;;
-    }
-
-    .lodearriba{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        color: white;
-        text-align: center;
-    }
-    .categoriasen2columnas{
-        display: flex;
-        justify-content: center;
-    
-    }
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
 }
