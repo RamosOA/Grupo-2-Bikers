@@ -8,15 +8,20 @@ body {
     font-size: 16px;
 }
 
-main{
+main {
     margin: 10px;
     background-color: var(--encabezado)
 }
-.register, .leyend, .ingreso{
+
+.register,
+.leyend,
+.ingreso {
     padding: 10px;
     margin: 0 auto;
     text-align: center;
 }
+
+
 
 form {
     width: 60vw;
@@ -24,53 +29,92 @@ form {
     min-width: 300px;
     margin: 0 auto;
     padding-bottom: 2em;
-    
+
 }
- 
+
+
 label {
     display: block;
     margin: 0.5rem 0;
 }
- 
-fieldset{
+
+fieldset {
     border: none;
     padding: 2rem 0;
     border-bottom: 3px solid #3b3b4f
 }
 
-.contenedor-login{
+.contenedor-login {
     border: none;
     padding: 2rem 0;
 
 }
-input,
+
+.input {
+    text-align: center;
+    width: 100%;
+    border-radius: 0.3rem;
+    border: none;
+    padding: 0.5rem;
+}
+
 textarea,
 select {
     margin: 10px 0 0 0;
     width: 100%;
     min-height: 2em;
 }
- 
+
 .inline {
     width: unset;
     margin: 0 0.5em 0 0;
-    vertical-align:middle;
+    vertical-align: middle;
 }
 
-a{
+a {
     color: white
 }
 
 input[type="submit"] {
     display: block;
-    width: 60%;
+    width: 100%;
     margin: 1em auto;
     height: 2em;
     font-size: 1.1rem;
     background-color: #3b3b4f;
     border-color: white;
     min-width: 300px;
-    color:white;
-    
+    color: white;
+
 }
 
+
+/* .NameUser {
+    text-align: center;
+    margin-bottom: 3rem;
+    overflow: hidden;
+
+}
+
+.NameUser input {
+    width: 70%;
+    border-radius: 0.3rem;
+    border: none;
+    padding: 0.5rem;
+}
+
+.Enviar {
+
+    background-color: var(--celeste);
+    width: 70%;
+    color: white;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    background-color: gray;
+    margin-bottom: 1rem;
+}
+
+.Enviar2 {
+    text-align: center;
+    background-color: gray;
+} */
