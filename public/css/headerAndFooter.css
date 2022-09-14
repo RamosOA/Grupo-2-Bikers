@@ -30,7 +30,6 @@ header {
     background-color: var(--encabezado);
     font-size: var(--font-size);
     font-weight: var(--font-weight);
-    padding-bottom: 10px;
 }
 
 
@@ -65,14 +64,18 @@ header {
     display: flex;
     opacity: 0.5;
     justify-content: flex-end;
-    margin-bottom: 10px;
+    /* align-self: center; */
 }
 
 #search {
     overflow: hidden;
     width: 20vw;
-    margin-bottom: 10px;
 }
+
+/* .fa-cart-shopping {
+    padding-top: 0.5rem;
+} */
+
 
 
 */ .categorias {
@@ -310,5 +313,20 @@ h4 {
         justify-content: flex-start;
         margin: 5px;
         ;
+    }
+
+    .lodearriba {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        color: white;
+        text-align: center;
+    }
+
+    .categoriasen2columnas {
+        display: flex;
+        justify-content: center;
+
     }
 }
