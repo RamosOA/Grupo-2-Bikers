@@ -1,0 +1,202 @@
+:root {
+    --primaryFont: 'Calibri', sans-serif;
+    --secondaryFont: 'Lobster', cursive;
+    --font-size: 1.438rem;
+    --font-weight: lighter;
+    --sm: 1rem;
+    --md: 1.125rem;
+    --lg: 1.125rem;
+    --ssm: 0.75rem;
+    --fondo: #666;
+    --titulos: rgb(203, 199, 199);
+    --parrafos: #1259c3;
+    --botones: #666;
+    --encabezado: black;
+    --categorias: black;
+}
+/*/////////////////////////////////////////////////////////// clases main /////////////////////////////////////////////////////////////*/
+.categorias {
+        display: none;
+    }
+
+    .div-contenedorPrincipal{
+        margin-right: 10px;
+        margin-left: 10px;
+        background-color: gainsboro;
+        border: solid 1px black;
+        font-family: var(--primaryFont);
+    }
+
+    .barras {
+        display: block;
+    }
+
+    img{
+        width: 100%;
+    }
+
+    .nombre-del-producto{
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .contenedor-descripcionDelProducto{
+        margin: 1rem;
+        text-align: justify;
+    }
+
+    .precio{
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .cantidadYCarrito{
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    .boton-carrito{
+
+        align-self: center;
+        background-color: black;
+        color: white;
+        border-radius: 0.8rem;
+
+    }
+/*/////////////////////////////////////////////////////////// Media query /////////////////////////////////////////////////////////////*/
+
+@media (min-width:492px) {
+    .categorias{
+        display: block;
+    }
+    
+.div-contenedorPrincipal{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+    background-color: var(--fondo);
+    border: none;
+}
+
+img{
+    width: 30vw;
+    margin-top: 2rem;
+}
+
+.div-contenedor-texto{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+}
+
+.nombre-del-producto{
+    background-color: gainsboro;
+    font-size: 30px;
+    color: black;
+    width: 50vw;
+    height: 2rem;
+    text-align: center;
+    margin-bottom: 0.8rem;    
+    border: solid 1px black;
+    font-weight: bold;
+    font-family: var(--primaryFont)
+
+}
+
+.contenedor-descripcionDelProducto{
+    background-color: gainsboro;
+    color: black;
+    width: 50vw;
+    height: 4rem;
+    text-align: center;
+    margin-bottom: 0.8rem;  
+    border: solid 1px black;
+    overflow: scroll;
+    margin-left: 0rem;
+}
+
+.precio{
+    background-color: gainsboro;
+    color: black;
+    width: 8rem;
+    height: 2rem;
+    text-align: center;
+    align-self: center;
+    margin-bottom: 1rem;
+    border: solid 1px black;
+    font-weight: bold;
+    font-size: 22px;
+    font-family: var(--primaryFont);
+    padding-bottom: -1rem;
+}
+
+.cantidadYCarrito{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.cantidad{
+    background-color: gainsboro;
+    margin-left: 2rem;
+    width: 7rem;
+    height: 2rem;
+    text-align: center;
+    border: solid 1px black;
+    font-weight: bold;
+    font-size: 26px;
+    font-family: var(--primaryFont)
+}
+
+.boton-carrito{
+    align-self: center;
+    background-color: black;
+    color: white;
+    border-radius: 0.8rem;
+}
+
+}
+
+
+@media (max-width:620px) {
+
+    header {
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 30vw;
+    }
+
+    .nav-bar ul {
+        list-style: none;
+        flex-wrap: wrap;
+        flex-direction: column;
+        text-align: end;
+        margin: 2px;
+    }
+
+
+    .nav-bar li {
+
+        margin: 10px;
+    }
+
+    .categorias ul {
+        display: flex;
+    }
+
+    .categorias li {
+
+        list-style: none;
+        justify-content: flex-start;
+        margin: 5px;
+        ;
+    }
+}
