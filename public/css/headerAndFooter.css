@@ -64,7 +64,7 @@ header {
     display: flex;
     opacity: 0.5;
     justify-content: flex-end;
-    /* align-self: center; */
+    align-self: center;
 }
 
 #search {
@@ -72,9 +72,9 @@ header {
     width: 20vw;
 }
 
-/* .fa-cart-shopping {
+.fa-cart-shopping {
     padding-top: 0.5rem;
-} */
+}
 
 
 
