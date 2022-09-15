@@ -24,9 +24,9 @@
                 </ul>
 
             </nav>
-            <form action="" class="search-bar">
-                <input type="search" placeholder="buscar" id="search"><a href="/Carrito"><button type="button"><i
-                            class="fa-solid fa-cart-shopping"></i>.</button></a>
+            <form action="/carrito" class="search-bar">
+                <input type="search" placeholder="buscar" id="search"><a href="/Carrito"><button id="carrito"
+                        type="button"><i class="fa-solid fa-cart-shopping"></i>.</button></a>
             </form>
 
         </div>
@@ -54,20 +54,16 @@
             <fieldset>
                 <label>Nombres <input type="text" required name="name"></label>
                 <label>Apellidos <input type="text" required name="last-name"></label>
-                <label>Email <input type="email" required name="email" placeholder="@domain.com"></label>
+                <label>E-mail <input type="email" required name="email" placeholder="@domain.com"></label>
                 <label>Contraseña <input type="password" required name="password"
                         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"></label>
                 <label>Confirmar Contraseña <input type="password" required name="password"
                         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"></label>
-                <!--pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters">
-SIRVE PARA PONER OBLIGATORIO NUMERO, UPPER Y LOWERCASE-->
             </fieldset>
             <fieldset>
                 <label><input class="inline" type="checkbox" required name="terms"> Acepto los <a href="#">Términos y
                         Condiciones</a></label>
             </fieldset>
-            <!--<fieldset></fieldset>-->
             <input type="submit" value="Enviar">
 
         </form>

@@ -2,11 +2,11 @@ body {
     width: 100%;
     height: 100vh;
     margin: 0;
-    /* background-color: #1b1b32; */
     color: #f5f6f7;
     font-family: Tahoma;
     font-size: 16px;
 }
+
 
 main {
     margin: 10px;
@@ -59,8 +59,8 @@ fieldset {
 }
 
 textarea,
-select, input {
-    margin: 10px 0 0 0;
+select,
+input {
     width: 100%;
     min-height: 2em;
 }
@@ -87,34 +87,3 @@ input[type="submit"] {
     color: white;
 
 }
-
-
-/* .NameUser {
-    text-align: center;
-    margin-bottom: 3rem;
-    overflow: hidden;
-
-}
-
-.NameUser input {
-    width: 70%;
-    border-radius: 0.3rem;
-    border: none;
-    padding: 0.5rem;
-}
-
-.Enviar {
-
-    background-color: var(--celeste);
-    width: 70%;
-    color: white;
-    padding: 0.3rem;
-    border-radius: 0.3rem;
-    background-color: gray;
-    margin-bottom: 1rem;
-}
-
-.Enviar2 {
-    text-align: center;
-    background-color: gray;
-} */
