@@ -1,11 +1,10 @@
-# Grupo_2_AccesoriosMotos
+# Grupo-2-Bikers
 
 Bienvenido a **B of Biker**, el principal portal de internet que te ofrece la mas amplia seleccion y variedad de los mejores accesorios para motociclistas.
 
 **B of Biker** es una tienda online de fácil y rápido acceso, diseñada para hacer de tu compra la mejor experiencia, pues ya no tienes que preocuparte por salir de compras, sino simplemente por dar un click y tener en la puerta de la casa los mejores productos del mercado.
 
 **Integrantes:**
-- Marcela Madrid
 - Diego Porto
 - Oscar Ramos
 - Cesar Rua
