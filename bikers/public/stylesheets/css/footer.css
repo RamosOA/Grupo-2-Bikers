@@ -1,44 +1,44 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0%;
     padding: 0%;
 }
 
-:root{
+:root {
     --colorLetra: rgb(83, 83, 83)
 }
 
 
-footer{
+footer {
     background-color: rgb(246, 246, 246);
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
-.footer-seccion-1{
+.footer-seccion-1 {
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
     color: var(--letraBody);
-    
+
 }
 
-.footer-seccion-seccion{
+.footer-seccion-seccion {
     padding: 30px;
     background-color: rgb(235, 235, 235);
     margin-left: -20px;
     margin-right: -20px;
 }
 
-.footer-seccion-seccion-div-suscribete{
+.footer-seccion-seccion-div-suscribete {
     margin-bottom: 2rem;
     font-size: 1.5rem;
 }
 
-.footer-seccion-seccion-div-novedades{
+.footer-seccion-seccion-div-novedades {
     margin-bottom: 10px;
 }
 
-.footer-seccion-seccion-div-form-input{
+.footer-seccion-seccion-div-form-input {
     width: 100%;
     height: 35px;
     margin-bottom: 30px;
@@ -46,16 +46,19 @@ footer{
 
 }
 
-::placeholder{
-    font-family: "Font Awesome 5 Free"; 
+.footer-seccion-seccion-div-form ::placeholder {
+    font-family: "Font Awesome 5 Free";
     font-weight: 400;
     font-size: 13px;
     padding-left: 1rem;
 }
 
+.icons {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+}
 
-
-.footer-seccion-seccion-div-button{
+.footer-seccion-seccion-div-button {
     background-color: red;
     color: white;
     width: 100%;
@@ -64,37 +67,37 @@ footer{
     font-weight: bold;
 }
 
-.icono-placeholder{
-    font-family: "Font Awesome 5 Free"; 
+.icono-placeholder {
+    font-family: "Font Awesome 5 Free";
     font-weight: 400;
 }
 
-.siguenos-iconoRedesSociales{
+.siguenos-iconoRedesSociales {
     margin-bottom: 30px;
 }
 
-.footer-seccion-siguenos{
+.footer-seccion-siguenos {
     margin-top: 30px;
     margin-bottom: 20px;
     color: rgb(83, 83, 83);
 }
 
-.fa-instagram{
+.fa-instagram {
     font-size: 40px;
     margin-right: 5px;
 }
 
-.fa-facebook{
+.fa-facebook {
     font-size: 40px;
     margin-right: 5px;
 }
 
-.fa-youtube{
+.fa-youtube {
     font-size: 40px;
     margin-bottom: 20px;
 }
 
-.footer-seccion-2{
+.footer-seccion-2 {
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
@@ -105,23 +108,23 @@ footer{
 }
 
 
-.parrafo-letraPequeña{
+.parrafo-letraPequeña {
     margin-bottom: 8px;
     font-size: 12px;
 }
 
-.div-parrafoFinal-footer{
+.div-parrafoFinal-footer {
     padding: 30px 20px 45px;
     color: rgb(157, 157, 157);
-    font-size: 12px;    
+    font-size: 12px;
 }
 
-.final-footer{
+.final-footer {
     background-color: rgb(61, 61, 61);
     width: 100%;
 }
 
-.final-footer-img{
+.final-footer-img {
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
@@ -130,18 +133,18 @@ footer{
 
 /*//////////////////////////////////////////////////////////////// MEDIA QUERY ///////////////////////////////////////////////////////////*/
 
-@media (min-width: 600px){
+@media (min-width: 600px) {
 
-    .footer-seccion-seccion-div{
+    .footer-seccion-seccion-div {
         display: flex;
         flex-direction: row;
     }
 
-    .footer-seccion-seccion-div-form{
+    .footer-seccion-seccion-div-form {
         width: 100%;
     }
 
-    .footer-seccion-seccion-div-button{
+    .footer-seccion-seccion-div-button {
         align-items: center;
         padding-left: 10px;
         padding-right: 10px;
@@ -150,23 +153,23 @@ footer{
 
 }
 
-@media (min-width: 900px){
+@media (min-width: 900px) {
 
-    .footer-seccion-2{
+    .footer-seccion-2 {
         margin-top: 0px;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
     }
 
-    .final-footer{
+    .final-footer {
         display: flex;
         flex-direction: row;
         align-content: center;
         justify-content: space-around;
     }
 
-    .final-footer-img{
+    .final-footer-img {
         width: 50%;
         padding-left: 5px;
         padding-right: 20px;
@@ -174,9 +177,8 @@ footer{
         padding-top: 50px;
     }
 
-    .div-parrafoFinal-footer{
+    .div-parrafoFinal-footer {
         padding-top: 50px;
     }
 
 }
-

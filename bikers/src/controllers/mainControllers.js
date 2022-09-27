@@ -21,7 +21,7 @@ const mainController = {
       },
 
     header: function(req, res) {
-      res.render('header');
+      res.render('../views/partial/header');
     },
 
 }

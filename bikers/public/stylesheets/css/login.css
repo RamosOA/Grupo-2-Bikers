@@ -1,12 +1,6 @@
-body {
-    color: #f5f6f7;
-    font-family: Tahoma;
-    font-size: 16px;
-}
-
-main {
-    margin: 10px;
-    background-color: var(--encabezado)
+.main {
+    margin: 0%;
+    background-color: var(--encabezado);
 }
 
 .register,
