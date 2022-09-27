@@ -20,6 +20,10 @@ const mainController = {
         res.render('login');
       },
 
+    header: function(req, res) {
+      res.render('header');
+    },
+
 }
 
 module.exports = mainController
