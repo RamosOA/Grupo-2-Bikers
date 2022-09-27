@@ -1,158 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bikers Club</title>
-    <link rel="stylesheet" href="\stylesheets\css\footer.css">
-    <link href="\stylesheets\css\stylesheethome.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/2f477f726e.js" crossorigin="anonymous"></script>
-</head>
 
-<body>
-    <header>
-        <img class="logo" src="/img/logo.jpeg" alt="logo">
-        </nav>
-        <div clase="nav-bar-and-search-bar">
-            <nav class="nav-bar">
-                <ul>
-                    <li> <a href="/contactanos">Contactanos</a></li>
-                    <li><a href="/register">Registrar</a></li>
-                    <li><a href="/login">Login</a></li>
-                </ul>
+<%- include('./partial/head.ejs') %>
+    <title>home</title>
 
-            </nav>
-            <form action="/Carrito" class="search-bar">
-                <input type="search" placeholder="buscar" id="search"><a href="/Carrito"><button type="button"><i
-                            class="fa-solid fa-cart-shopping"></i>.</button></a>
-            </form>
+    <body>
 
-        </div>
-    </header>
-    <nav class="categorias">
-        <ul>
-            <li> <a href="/">Inicio</a></li>
-            <li> <a href="/detalleDeProducto">Accesorios</a> </li>
-            <li><a href="/detalleDeProducto">Cascos</a></li>
-            <li><a href="/detalleDeProducto">Vestuarios</a></li>
-            <li><a href="/detalleDeProducto">Botas</a></li>
-            <li><a href="/detalleDeProducto">Maletas</a></li>
-            <li><a href="/detalleDeProducto">Guantes</a></li>
-            <li><a href="/detalleDeProducto">Ofertas</a></li>
-        </ul>
-    </nav>
-
-    <div class="barras">
-        <button class="barras2" type="button" aria-label="button"><i class="fa-solid fa-bars"></i></button>
-    </div>
-
-<!--////////////////////////////////////////////////////////////// INICIO MAIN ////////////////////////////////////////////////////////-->
-
-    <main>
-        <div class="anuncio">
-            <a class="anuncioa" href="/detalleDeProducto"><img class="propagandita" src="\images\img\propagandita.PNG"
-                    alt="anuncio"></a>
-
-        <!-- </div>
-        <h1 class="tituloProductosInteres">PRODUCTOS QUE TE PUEDEN INTERESAR</h1>
-        <div class="productosInteres">
-            <div class="cuadritos">
-                <img class="imagen" src="https://img.remediosdigitales.com/ac7a19/crosshelmet-02/1366_2000.png"
-                    alt="mujeres">
-                <h4>Parque las motos no es solo cosa de hombres, encuentra aqui todo para ti.</h4>
-                <form action="/detalleDeProducto">
-                    <button type="submit">Ver productos</button>
-                </form>
-
-            </div>
-
-            <div class="cuadritos">
-                <img class="imagen"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLCkByxpG5YoA-X05CRKk7ZwhkleXXYG0_fw&usqp=CAU"
-                    alt="mujeres">
-                <h4>Deja de cargar morrales en la espalda, liberate y compra un maletero.</h4>
-                <form action="/detalleDeProducto">
-                    <button type="submit">Ver productos</button>
-                </form>
-
-            </div>
-
-            <div class="cuadritos">
-                <img class="imagen" src="https://i.linio.com/p/79c39f550d3facf596f0140eb221935b-product.jpg"
-                    alt="mujeres">
-                <h4>Porque la seguridadesta en tus manos, no las decuides y usa guantes.</h4>
-                <form action="/detalleDeProducto">
-                    <button type="submit">Ver productos</button>
-                </form>
-
-            </div>
-            <div class="cuadritos">
-                <img class="imagen"
-                    src="https://ae01.alicdn.com/kf/H112474a899034cdab008547bca934ee3A/Chaqueta-de-motociclista-para-hombre-ropa-de-verano-de-malla-completa-protecci-n-transpirable-uglyBROS.jpg_Q90.jpg_.webp"
-                    alt="mujeres">
-                <h4>Accede aquí a diferentes opciones en chaquetas moto con protección, que te brinden un mayor confort.
-                </h4>
-                <form action="/detalleDeProducto">
-                    <button type="submit">Ver productos</button>
-                </form>
+        <%- include('./partial/header.ejs') %>
 
 
+            <!--////////////////////////////////////////////////////////////// INICIO MAIN ////////////////////////////////////////////////////////-->
 
+            <main>
+                <div class="anuncio">
+                    <a class="anuncioa" href="/detalleDeProducto"><img class="propagandita"
+                            src="\images\img\propagandita.PNG" alt="anuncio"></a>
 
-
-            </div> -->
-
-    </main>
-
-    <footer>
-        <section class="footer-seccion-1">
-            <section class="footer-seccion-seccion">
-                <div>
-                    <h3 class="footer-seccion-seccion-div-suscribete">SUSCRíBETE</h3>
-                    <p class="footer-seccion-seccion-div-novedades">Recibe las ultimas novedades en tu correo</p>
                 </div>
-                <div class="footer-seccion-seccion-div">
-                    <form action="" class="footer-seccion-seccion-div-form">
-                        <input type="email" placeholder="  Introduzca su correo electronico" class="footer-seccion-seccion-div-form-input">
-                    </form>
-                    <div>
-                        <button class="footer-seccion-seccion-div-button">SUSCRIBIRSE</button>
+                <h1 class="tituloProductosInteres">PRODUCTOS QUE TE PUEDEN INTERESAR</h1>
+                <div class="productosInteres">
+                    <div class="cuadritos">
+                        <img class="imagen" src="https://img.remediosdigitales.com/ac7a19/crosshelmet-02/1366_2000.png"
+                            alt="mujeres">
+                        <h4>Parque las motos no es solo cosa de hombres, encuentra aqui todo para ti.</h4>
+                        <form action="/detalleDeProducto">
+                            <button type="submit">Ver productos</button>
+                        </form>
+
                     </div>
-                </div>
-            </section>
-            <div class="siguenos-iconoRedesSociales">
-                <h3 class="footer-seccion-siguenos"> SIGUENOS</h3>
-                <i class="fa-brands fa-instagram"></i><i class="fa-brands fa-facebook"></i><i class="fa-brands fa-youtube"></i>
-            </div>
-        </section>
-        <section class="footer-seccion-2">
-                <div class="footer-seccion-2-div-nuestraSede">
-                    <h3 class="footer-seccion-siguenos">NUESTRA SEDE</h3>
-                    <p class="parrafo-letraPequeña">Guarne - Antioquia - Colombia</p>
-                </div>
-                <div class="footer-seccion-2-div-Nosotros">
-                    <h3 class="footer-seccion-siguenos">NOSOTROS</h3>
-                    <p class="parrafo-letraPequeña">Contactanos</p>
-                    <p class="parrafo-letraPequeña">Ayuda pagos online</p>
-                    <p class="parrafo-letraPequeña">Distribuir nuestros productos</p>
-                    <p class="parrafo-letraPequeña">Terminos legales</p>
-                </div>
-                <div class="footer-seccion-2-div-pedidos">
-                    <h3 class="footer-seccion-siguenos">PEDIDOS</h3>
-                    <p class="parrafo-letraPequeña">Rastreo de pedidos</p>
-                    <p class="parrafo-letraPequeña">Disponibilidad de productos</p>
-                    <p class="parrafo-letraPequeña">Devoluciones y garantias</p>
-                    <p class="parrafo-letraPequeña">Pagos distribuidores</p> 
-                </div>
-        </section>
-    </footer>
-    <div class="final-footer">
-        <div class="div-parrafoFinal-footer">
-            <p>Copyright 1999-2020 Accesorios motos - Todos los derechos reservados</p>
-        </div>  
-       <img  class="final-footer-img" src="https://www.fpmoto.com/pub/media/wysiwyg/pagos_v1.png" alt="medios de pago aceptados en fire parts"> 
-    </div>
-</body>
+
+                    <div class="cuadritos">
+                        <img class="imagen"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLCkByxpG5YoA-X05CRKk7ZwhkleXXYG0_fw&usqp=CAU"
+                            alt="mujeres">
+                        <h4>Deja de cargar morrales en la espalda, liberate y compra un maletero.</h4>
+                        <form action="/detalleDeProducto">
+                            <button type="submit">Ver productos</button>
+                        </form>
+
+                    </div>
+
+                    <div class="cuadritos">
+                        <img class="imagen" src="https://i.linio.com/p/79c39f550d3facf596f0140eb221935b-product.jpg"
+                            alt="mujeres">
+                        <h4>Porque la seguridadesta en tus manos, no las decuides y usa guantes.</h4>
+                        <form action="/detalleDeProducto">
+                            <button type="submit">Ver productos</button>
+                        </form>
+
+                    </div>
+                    <div class="cuadritos">
+                        <img class="imagen"
+                            src="https://ae01.alicdn.com/kf/H112474a899034cdab008547bca934ee3A/Chaqueta-de-motociclista-para-hombre-ropa-de-verano-de-malla-completa-protecci-n-transpirable-uglyBROS.jpg_Q90.jpg_.webp"
+                            alt="mujeres">
+                        <h4>Accede aquí a diferentes opciones en chaquetas moto con protección, que te brinden un mayor
+                            confort.
+                        </h4>
+                        <form action="/detalleDeProducto">
+                            <button type="submit">Ver productos</button>
+                        </form>
+
+
+
+
+
+                    </div>
+
+            </main>
+
+            <%- include('./partial/footer.ejs') %>
+
+    </body>
 
 </html>

@@ -1,183 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<%- include('./partial/head.ejs') %>
     <title>Carrito Bikers</title>
-    <link href="/css/stylesheethome.css" rel="stylesheet">
-    <link href="/css/Carrito.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/2f477f726e.js" crossorigin="anonymous"></script>
-</head>
 
-<body>
-    <header>
-        <img class="logo" src="/img/logo.jpeg" alt="logo">
-        </nav>
-        <div clase="nav-bar-and-search-bar">
-            <nav class="nav-bar">
-                <ul>
-                    <li> <a href="/contactanos">Contactanos</a></li>
-                    <li><a href="/register">Registrar</a></li>
-                    <li><a href="/login">Login</a></li>
-                </ul>
-
-            </nav>
-            <form action="/carrito" class="search-bar">
-                <input type="search" placeholder="buscar" id="search"><a href="/Carrito"><button type="button"><i
-                            class="fa-solid fa-cart-shopping"></i>.</button></a>
-            </form>
-
-        </div>
-    </header>
-    <nav class="categorias">
-        <ul>
-            <li> <a href="/">Inicio</a></li>
-            <li> <a href="/detalleDeProducto">Accesorios</a> </li>
-            <li><a href="/detalleDeProducto">Cascos</a></li>
-            <li><a href="/detalleDeProducto">Vestuarios</a></li>
-            <li><a href="/detalleDeProducto">Botas</a></li>
-            <li><a href="/detalleDeProducto">Maletas</a></li>
-            <li><a href="/detalleDeProducto">Guantes</a></li>
-            <li><a href="/detalleDeProducto">Ofertas</a></li>
-        </ul>
-    </nav>
-
-    <div class="barras">
-        <button class="barras2" type="button" aria-label="button"><i class="fa-solid fa-bars"></i></button>
-    </div>
-
-    <main>
-        <div class="botones">
-            <button type="button" class="boton">Carrito</button>
-            <button type="button" class="boton">Guardados</button>
-        </div>
-
-        <section class="articulos">
-
-            <section class="articulo">
-
-                <img src="img\casco.jpeg" alt="Casco negro" class="imagenes">
-
-                <section class="descripcion">
-                    <h2 class="titulo">CASCO HAWK RS11</h2>
-                    <p>CASCO INTEGRAL HAWK RS11 REVO SOPHIE talle M (58CM)</p>
-                    <div class="cantidad">
-                        <p>Cantidad</p><button class="suma">+</button><button class="suma">-</button>
-                    </div>
-                </section>
-
-            </section>
-
-            <section class="articulo">
-
-                <img src="https://http2.mlstatic.com/D_NQ_NP_812208-MCO40517820689_012020-V.jpg" alt="Guantes"
-                    class="imagenes">
-
-                <section class="descripcion">
-                    <h2 class="titulo">GUANTES PROTECTORES</h2>
-                    <p>GUANTES PROTECTORES PERFECTOS PARA PROTEGERTES DEL FRIO Y CAIDAS talle M</p>
-                    <div class="cantidad">
-                        <p>Cantidad</p><button class="suma">+</button><button class="suma">-</button>
-                    </div>
-                </section>
-
-            </section>
-
-            <section class="articulo">
-
-                <img src="https://pigmalionmoto.com/wp-content/uploads/2018/06/CHAQUETA-ULTRALIGTH-LADO.jpg"
-                    alt="Chaqueta" class="imagenes">
-
-                <section class="descripcion">
-                    <h2 class="titulo">CHAQUETA DE CUERO</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum numquam dolor nam, corporis
-                        saepe animi distinctio doloribus. Sapiente voluptatem dolorum vitae ex explicabo, dolores in
-                        omnis perferendis ipsa! Quas, vel!</p>
-                    <div class="cantidad">
-                        <p>Cantidad</p><button class="suma">+</button><button class="suma">-</button>
-                    </div>
-                </section>
-
-            </section>
-
-            <section class="articulo">
-
-                <img src="https://kojumotos.com/wp-content/uploads/2018/11/maletero-para-moto-2-cascos-kojumotos-8-Red.jpg"
-                    alt="maletero" class="imagenes">
-
-                <section class="descripcion">
-                    <h2 class="titulo">MALETERO</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati repellat illum explicabo
-                        sequi numquam, libero est harum voluptates, soluta ab atque dignissimos laudantium sunt, commodi
-                        voluptatibus debitis ratione saepe quam.</p>
-                    <div class="cantidad">
-                        <p>Cantidad</p><button class="suma">+</button><button class="suma">-</button>
-                    </div>
-                </section>
-            </section>
-
-        </section>
-
-
-        <div class="botones"><button type="button" class="boton">Comprar</button></div>
-
-    </main>
-
-    <footer class="footer">
-        <div class="lodearriba">
-            <div class="contacto">
-                <h3>Contactanos</h3>
-                <h5>Calle x #xx-xx Antioquia, Colombia</h5>
-                <h5>Telefono: 3d3 5d6 d456 - 604-531 d655</h5>
-                <h5>Correo: nuestrocorreo@losmejores.com</h5>
-            </div>
-
-            <div class="mascategorias">
-                <h3>Categorías</h3>
-                <div class="categoriasen2columnas">
-                    <ul>
-                        <li> <a href="/">Inicio</a></li>
-                        <li> <a href="/detalleDeProducto">Accesorios</a> </li>
-                        <li><a href="/detalleDeProducto">Cascos</a></li>
-                        <li><a href="/detalleDeProducto">Vestuarios</a></li>
-                    </ul>
-                    <ul>
-
-                        <li><a href="/detalleDeProducto">Botas</a></li>
-                        <li><a href="/detalleDeProducto">Maletas</a></li>
-                        <li><a href="/detalleDeProducto">Guantes</a></li>
-                        <li><a href="/detalleDeProducto">Ofertas</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="redessociales">
-                <h3>Nos encuentras tambien en:</h3>
-                <div class="redeslogos">
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-twitter"></i>
-                    <i class="fa-brands fa-linkedin-in"></i>
-
+    <body>
+        <%- include('./partial/header.ejs') %>
+            <main>
+                <div class="botones">
+                    <button type="button" class="boton">Carrito</button>
+                    <button type="button" class="boton">Guardados</button>
                 </div>
 
-            </div>
+                <section class="articulos">
 
-        </div>
+                    <section class="articulo">
 
-        <div class="lodeabajo">
-            <p class="privacidad">Toda la información de este sitio es propiedad del sitio por lo tanto, no se puede
-                modificar, copiar, extraer o utilizar de otra manera sin el consentimiento expreso previo y por escrito.
-                Por lo tanto, al acceder a www.bikersclub.com, el usuario es consciente de que el mal uso de esta
-                información puede resultar en sanciones civiles y penales</p>
-        </div>
+                        <img src="img\casco.jpeg" alt="Casco negro" class="imagenes">
 
-    </footer>
+                        <section class="descripcion">
+                            <h2 class="titulo">CASCO HAWK RS11</h2>
+                            <p>CASCO INTEGRAL HAWK RS11 REVO SOPHIE talle M (58CM)</p>
+                            <div class="cantidad">
+                                <p>Cantidad</p><button class="suma">+</button><button class="suma">-</button>
+                            </div>
+                        </section>
+
+                    </section>
+
+                    <section class="articulo">
+
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_812208-MCO40517820689_012020-V.jpg" alt="Guantes"
+                            class="imagenes">
+
+                        <section class="descripcion">
+                            <h2 class="titulo">GUANTES PROTECTORES</h2>
+                            <p>GUANTES PROTECTORES PERFECTOS PARA PROTEGERTES DEL FRIO Y CAIDAS talle M</p>
+                            <div class="cantidad">
+                                <p>Cantidad</p><button class="suma">+</button><button class="suma">-</button>
+                            </div>
+                        </section>
+
+                    </section>
+
+                    <section class="articulo">
+
+                        <img src="https://pigmalionmoto.com/wp-content/uploads/2018/06/CHAQUETA-ULTRALIGTH-LADO.jpg"
+                            alt="Chaqueta" class="imagenes">
+
+                        <section class="descripcion">
+                            <h2 class="titulo">CHAQUETA DE CUERO</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum numquam dolor nam,
+                                corporis
+                                saepe animi distinctio doloribus. Sapiente voluptatem dolorum vitae ex explicabo,
+                                dolores in
+                                omnis perferendis ipsa! Quas, vel!</p>
+                            <div class="cantidad">
+                                <p>Cantidad</p><button class="suma">+</button><button class="suma">-</button>
+                            </div>
+                        </section>
+
+                    </section>
+
+                    <section class="articulo">
+
+                        <img src="https://kojumotos.com/wp-content/uploads/2018/11/maletero-para-moto-2-cascos-kojumotos-8-Red.jpg"
+                            alt="maletero" class="imagenes">
+
+                        <section class="descripcion">
+                            <h2 class="titulo">MALETERO</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati repellat illum
+                                explicabo
+                                sequi numquam, libero est harum voluptates, soluta ab atque dignissimos laudantium sunt,
+                                commodi
+                                voluptatibus debitis ratione saepe quam.</p>
+                            <div class="cantidad">
+                                <p>Cantidad</p><button class="suma">+</button><button class="suma">-</button>
+                            </div>
+                        </section>
+                    </section>
+
+                </section>
 
 
+                <div class="botones"><button type="button" class="boton">Comprar</button></div>
 
-</body>
+            </main>
+
+            <%- include('./partial/footer.ejs') %>
+    </body>
 
 </html>

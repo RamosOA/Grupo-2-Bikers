@@ -5,15 +5,16 @@
     color: #f5f6f7;
     font-family: Tahoma;
     font-size: 16px;
-}
-
-
-main {
-    margin: 10px;
-    background-color: var(--encabezado)
 } */
 
-/* .register,
+
+.main1 {
+    margin: 0%;
+    background-color: var(--encabezado);
+    color: white
+}
+
+.register,
 .leyend,
 .ingreso {
     padding: 10px;
@@ -23,7 +24,7 @@ main {
 
 
 
-form {
+.form {
     width: 60vw;
     max-width: 500px;
     min-width: 300px;
@@ -86,4 +87,4 @@ input[type="submit"] {
     min-width: 300px;
     color: white;
 
-} */
+}
