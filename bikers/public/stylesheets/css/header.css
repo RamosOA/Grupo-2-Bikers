@@ -10,9 +10,10 @@
 }
 
 .logo {
-    width: 20%;
-    margin-top: 4px;
-    margin-left: 4px;
+    width: 30%;
+    /* height: 3rem; */
+    /* margin-top: 4px;
+    margin-left: 4px; */
 
 }
 
@@ -139,6 +140,13 @@
         flex-direction: row;
     }
 
+    .logo {
+        width: 30vw;
+        height: 5rem;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+
 
 }
 
@@ -154,12 +162,19 @@
     .burguer-and-menú {
         display: flex;
     }
+
+    .logo {
+        height: 7rem;
+    }
 }
 
 @media (min-width: 900px) {
     .burguer-and-menú {
         display: none;
+    }
 
+    .logo {
+        width: 20vw;
     }
 
     .boton-shopping {
