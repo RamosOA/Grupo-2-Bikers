@@ -1,16 +1,16 @@
 const mainController = {
 
-    home: function(req, res) {
-        res.render('home');
-      },
+    // home: function(req, res) {
+    //     res.render('home');
+    //   },
 
     carrito: function(req, res) {
         res.render('carrito');
       },
 
-    detalle: function(req, res) {
-        res.render('detalle');
-      },
+    // detalle: function(req, res) {
+    //     res.render('detalle');
+    //   },
 
     register: function(req, res) {
         res.render('register');

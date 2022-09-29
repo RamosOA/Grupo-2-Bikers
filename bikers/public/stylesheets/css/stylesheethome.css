@@ -110,6 +110,7 @@ body {
     width: 200px;
     background-color: rgb(158, 156, 156);
     font-family: var(--primaryFont);
+    margin: 10px;
 }
 
 .imagen {
@@ -130,9 +131,6 @@ body {
     flex-wrap: wrap;
 }
 
-.cuadritos {
-    margin: 10px;
-}
 
 .cuadritos button {
     margin-left: 50px;
