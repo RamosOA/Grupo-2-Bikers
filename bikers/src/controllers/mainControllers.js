@@ -20,9 +20,9 @@ const mainController = {
         res.render('login');
       },
 
-    header: function(req, res) {
-      res.render('../views/partial/header');
-    },
+    anadir: function(req, res) {
+        res.render('anadirProducto');
+      },
 
 }
 

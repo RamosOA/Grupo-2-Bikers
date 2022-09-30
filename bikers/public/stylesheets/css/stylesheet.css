@@ -10,8 +10,8 @@
 
 .main1 {
     margin: 0%;
-    background-color: var(--encabezado);
-    color: white
+    background-color: rgba(53, 53, 53, 0.4);
+
 }
 
 .register,

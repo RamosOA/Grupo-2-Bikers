@@ -9,7 +9,8 @@ var carritoRouter = require('./src/routes/carrito.js');
 var detalleRouter = require('./src/routes/detalle.js');
 var registerRouter = require('./src/routes/register.js');
 var loginRouter = require('./src/routes/login.js');
-var headerRouter = require('./src/routes/header.js');
+var anadirRouter = require('./src/routes/anadirProducto.js');
+
 
 var app = express();
 
@@ -28,7 +29,7 @@ app.use('/detalle', detalleRouter);
 app.use('/carrito', carritoRouter);
 app.use('/register', registerRouter);
 app.use('/login', loginRouter);
-app.use('/header', headerRouter);
+app.use('/anadir', anadirRouter);
 
 // // catch 404 and forward to error handler
 // app.use(function(req, res, next) {

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partial/head.ejs') %>
+    <title>Añadir Bikers</title>
+
+    <body>
+        <%- include('./partial/header.ejs') %>
+            <main id="anadir">
+
+                <h2 class="titulo-añadir-producto">Añadir producto</h2>
+                <!-- <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                        aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Recipient's username"
+                        aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <span class="input-group-text" id="basic-addon2">@example.com</span>
+                </div>
+
+                <label for="basic-url" class="form-label">Your vanity URL</label>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                </div> -->
+
+
+                <section class="inputs">
+                    <form class="input-group mb-3">
+                        <input type="text" class="form-Username" placeholder="ID del producto" aria-label="Username">
+
+                    </form>
+
+                    <form class="input-group mb-3">
+                        <input type="text" class="form-Articulo" placeholder="Articulo" aria-label="Server">
+                    </form>
+
+                    <form class="input-image">
+                        <label for="image" class="label-imagen">Ingresar imagen del producto</label>
+                        <input type="file" class="form-imagen" name="image">
+                    </form>
+
+                    <form class="input-group mb-3">
+                        <input type="text" class="form-text-2" aria-label="Amount (to the nearest dollar)"
+                            placeholder="descripción corta del producto">
+                    </form>
+
+                    <form class="input-group mb-3">
+                        <input type="text" class="form-text" aria-label="Amount (to the nearest dollar)"
+                            placeholder="descripción">
+                    </form>
+
+                    <form class="input-group mb-3">
+                        <span class="input-group-text">$</span>
+                        <input type="number" class="form-Dinero" aria-label="Amount (to the nearest dollar)">
+                        <span class="input-group-text">.00</span>
+                    </form>
+                </section>
+
+                <button class="boton-crearProducto">Crear producto</button>
+            </main>
+
+            <%- include('./partial/footer.ejs') %>
+
+    </body>
+
+</html>
