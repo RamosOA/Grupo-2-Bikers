@@ -3,7 +3,7 @@ var router = express.Router();
 const mainController = require('../controllers/mainControllers')
 
 /* GET home page. */
-router.get('/', mainController.header);
+router.get('/', mainController.anadir);
 
 // router.get()
 

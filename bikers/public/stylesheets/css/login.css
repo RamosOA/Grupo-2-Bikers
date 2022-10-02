@@ -1,6 +1,6 @@
 .main {
     margin: 0%;
-    background-color: var(--encabezado);
+    background-color: rgba(53, 53, 53, 0.4);
 }
 
 .register,
@@ -20,7 +20,6 @@
 }
 
 .NameUser input {
-    width: 70%;
     border-radius: 0.3rem;
     border: none;
     padding: 0.5rem;
@@ -39,4 +38,34 @@
 
 .Enviar2 {
     text-align: center;
+}
+
+@media (min-width: 300px) {
+    .NameUser input {
+        width: 70vw;
+    }
+
+    .Enviar {
+        width: 50vw;
+    }
+}
+
+@media (min-width: 600px) {
+    .NameUser input {
+        width: 50vw;
+    }
+
+    .Enviar {
+        width: 30vw;
+    }
+}
+
+@media (min-width: 900px) {
+    .NameUser input {
+        width: 30vw;
+    }
+
+    .Enviar {
+        width: 15vw;
+    }
 }

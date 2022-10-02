@@ -1,0 +1,97 @@
+#anadir {
+    text-align: center;
+    margin: 0%;
+    background-color: rgba(53, 53, 53, 0.4);
+}
+
+.titulo-añadir-producto {
+    padding-top: 1rem;
+    font-weight: 900;
+}
+
+.form-Username {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    width: 50vw;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 1rem;
+}
+
+.form-Articulo {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    width: 50vw;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 1rem;
+}
+
+
+.form-imagen {
+    text-align-last: center;
+}
+
+.form-text-2 {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 0.5em;
+    width: 50vw;
+    background-color: whitesmoke;
+    border: none;
+}
+
+.form-text {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    width: 50vw;
+    background-color: whitesmoke;
+    border: none;
+    height: 3rem;
+}
+
+.form-Dinero {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    width: 40vw;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 1rem;
+}
+
+.boton-crearProducto {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    background-color: gray;
+    width: 10vw;
+    border-radius: 1rem;
+    color: white;
+    height: 1.5rem;
+    font-weight: 600;
+}
+
+
+@media (min-width: 600px) {
+
+    .form-Username {
+        width: 30vw;
+    }
+
+    .form-Dinero {
+        width: 25vw;
+    }
+}
+
+@media (min-width: 900px) {
+
+    .form-Username {
+        width: 20vw;
+    }
+
+    .form-Dinero {
+        width: 15vw;
+    }
+}
