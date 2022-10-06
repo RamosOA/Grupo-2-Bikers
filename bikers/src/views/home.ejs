@@ -18,22 +18,23 @@
 
                 </div>
                 <h1 class="tituloProductosInteres">PRODUCTOS QUE TE PUEDEN INTERESAR</h1>
+
+
                 <% for(let i=0; i<accesorios.length; i++) { %>
-
-                
-                <div class="productosInteres">
-                    <div class="cuadritos">
-                        <img class="imagen" src="<%= accesorios[i].img %>"
-                            alt="mujeres">
-                        <h4><%= accesorios[i].descripcionLarga %> </h4>
-                        <form action="/detalle/<%= accesorios[i].id %>">
-                            <button type="submit">Ver productos</button>
-                        </form>
+                    <div class="productosInteres">
+                        <div class="cuadritos">
+                            <img class="imagen" src="<%= accesorios[i].img %>" alt="mujeres">
+                            <h4>
+                                <%= accesorios[i].descripcionLarga %>
+                            </h4>
+                            <form action="/detalle/<%= accesorios[i].id %>">
+                                <button type="submit">Ver productos</button>
+                            </form>
+                        </div>
                     </div>
+                    <% }%>
 
-                <% }%> 
-
-                    <!-- <div class="cuadritos">
+                        <!-- <div class="cuadritos">
                         <img class="imagen"
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLCkByxpG5YoA-X05CRKk7ZwhkleXXYG0_fw&usqp=CAU"
                             alt="mujeres">

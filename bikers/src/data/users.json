@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "nombre": "Oscar",
+        "apellido": "Ramos",
+        "email": "oscar123@gmail.com",
+        "password": "123Oscar",
+        "categotia": "admin"
+    },
+    {
+        "id": 2,
+        "nombre": "Diego",
+        "apellido": "Porto",
+        "email": "diego123@gmail.com",
+        "password": "123Diego",
+        "categotia": "user"
+    },
+    {
+        "id": 3,
+        "nombre": "Cesar",
+        "apellido": "Rua",
+        "email": "cesar123@gmail.com",
+        "password": "123Cesar",
+        "categotia": "user"
+    }
+]
