@@ -1,12 +1,16 @@
+const fs = require('fs');
+const path = require('path');
+
+const productsFilePath = path.join(__dirname, '../data/database.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
 const mainController = {
 
-    // home: function(req, res) {
-    //     res.render('home');
-    //   },
+    home: function(req, res) {
+      res.render('home',{accesorios:products});
+    },
 
-    carrito: function(req, res) {
-        res.render('carrito');
-      },
+    
 
     // detalle: function(req, res) {
     //     res.render('detalle');
@@ -20,9 +24,7 @@ const mainController = {
         res.render('login');
       },
 
-    anadir: function(req, res) {
-        res.render('anadirProducto');
-      },
+
 
 }
 
