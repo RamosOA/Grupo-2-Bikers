@@ -10,11 +10,6 @@ const mainController = {
       res.render('home',{accesorios:products});
     },
 
-    
-
-    // detalle: function(req, res) {
-    //     res.render('detalle');
-    //   },
 
     register: function(req, res) {
         res.render('register');
