@@ -10,11 +10,17 @@
             <!--//////////////////////////////////////////////////// inicio main ////////////////////////////////////////////////////////////-->
             <main>
                 <section class="div-contenedorPrincipal">
-                    <img src="<%= producto.img %>" alt="">
+                    <img src="<%=producto.img%>" alt="">
                     <div class="div-contenedor-texto">
-                        <h3 class="nombre-del-producto"><%= producto.titulo %> </h3>
-                        <p class="contenedor-descripcionDelProducto"><%= producto.descripcion %></p>
-                        <p class="precio"><%= producto.precio %></p>
+                        <h3 class="nombre-del-producto">
+                            <%= producto.titulo %>
+                        </h3>
+                        <p class="contenedor-descripcionDelProducto">
+                            <%= producto.descripcion %>
+                        </p>
+                        <p class="precio">
+                            <%= producto.precio %>
+                        </p>
                         <section class="cantidadYCarrito">
                             <button class="boton-carrito" data-id="<%=producto.id%>">Agregar al carrito</button>
                         </section>

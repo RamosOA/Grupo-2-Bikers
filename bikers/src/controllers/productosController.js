@@ -25,33 +25,24 @@ const mainController = {
     },
 
     create: function(req, res){
-        // let image 
-		// if(req.files[0] != undefined){
-		// 	image = req.files[0].filename;	
-		// }else{
-		// 	image = 'default-image.png'
-		// }
-		// let newProduct = {
-		// 	id: products[products.length - 1].id + 1,
-		// 	...req.body,
-		// 	image: image,
-		// }
-		// products.push(newProduct)
-		// fs.writeFileSync(productsFilePath,JSON.stringify(products,null));
-        console.log("******************************")
-        console.log(req.body)
-        console.log("******************************")
+
+        let img
+
+        if(req.files[0] != undefined){
+            img = req.files[0].filename;
+        }
+
         let newProduct = {
             id: products[products.length - 1].id + 1,
             titulo: req.body.titulo,
+            img: img,
             descripcion: req.body.descripcion,
-            image: req.body.image,
             descripcionLarga: req.body.descripcionLarga,
             precio: req.body.precio
-
         }
         products.push(newProduct)
 		fs.writeFileSync(productsFilePath,JSON.stringify(products,null));
+        
 		res.redirect('/');
     },
 }
