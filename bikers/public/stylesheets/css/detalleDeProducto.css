@@ -71,6 +71,16 @@ img {
 
 }
 
+.boton-editarProducto {
+
+    align-self: center;
+    background-color: black;
+    color: white;
+    border-radius: 0;
+    margin-left: 10px;
+
+}
+
 /*/////////////////////////////////////////////////////////// Media query /////////////////////////////////////////////////////////////*/
 
 @media (min-width:492px) {

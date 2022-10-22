@@ -23,6 +23,37 @@ const mainController = {
     anadir: function(req, res) {
         res.render('anadirProducto');
     },
+
+    edit: function(req, res) {
+        let productToEdit = products.find(product => product.id == req.params.id)
+		console.log(productToEdit);
+        res.render('edit',{productToEdit});
+    },
+
+    update: (req, res) => {
+        console.log(req.body)
+		let productToUpdate = products.find(product => product.id == req.params.id)
+		let image
+		if(req.files != undefined){
+			image = req.files[0].filename;	
+		}else{
+			image = productToUpdate.img;
+		}
+		let NewProductToUpdate = {
+			id: productToUpdate.id,
+			...req.body,
+			img: image,
+		}
+		let newProduct = products.map(product =>{
+			if (product.id == NewProductToUpdate.id){
+				return product = {...NewProductToUpdate}
+			} 
+			return product;
+		})
+        console.log(newProduct)
+		fs.writeFileSync(productsFilePath,JSON.stringify(newProduct,null));
+		res.redirect('/')
+	},
 }
 
 module.exports = mainController
