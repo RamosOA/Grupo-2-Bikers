@@ -8,28 +8,28 @@
         <%- include('./partial/header.ejs') %>
             <main id="anadir">
 
-                <h2 class="titulo-añadir-producto">Añadir producto</h2>
+                <h2 class="titulo-añadir-producto">Añadir producto</h2> <br>
 
                 <section class="inputs">
-                    <form class="input-group mb-3">
-                        <input type="text" class="form-Username" placeholder="ID del producto"
-                            aria-label="Username"><br>
-                        <input type="text" class="form-Articulo" placeholder="Articulo" aria-label="Server"><br>
+                    <form class="input-group mb-3" method="post" enctype="multipart/form-data">
+                        <input type="text" class="form-Articulo" placeholder="Articulo" aria-label="Server"
+                            name="titulo"><br>
                         <div class="input-image">
                             <label for="image" class="label-imagen">Ingresar imagen del producto</label>
-                            <input type="file" class="form-imagen" name="image">
+                            <input type="file" class="form-imagen" name="img" id="img">
                         </div><br>
                         <input type="text" class="form-text-2" aria-label="Amount (to the nearest dollar)"
-                            placeholder="descripción corta del producto"><br>
+                            placeholder="descripción corta del producto" name="descripcion"><br>
                         <input type="text" class="form-text" aria-label="Amount (to the nearest dollar)"
-                            placeholder="descripción"><br>
+                            placeholder="descripción" name="descripcionLarga"><br>
                         <div class="input-group mb-3">
                             <span class="input-group-text">$</span>
-                            <input type="number" class="form-Dinero" aria-label="Amount (to the nearest dollar)">
+                            <input type="number" class="form-Dinero" aria-label="Amount (to the nearest dollar)"
+                                name="precio">
                             <span class="input-group-text">.00</span>
                         </div><br>
 
-                        <button class="boton-crearProducto">Crear producto</button>
+                        <button class="boton-crearProducto" type="submit">Crear producto</button>
                     </form>
 
                 </section>

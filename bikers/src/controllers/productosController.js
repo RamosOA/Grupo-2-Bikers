@@ -54,6 +54,27 @@ const mainController = {
 		fs.writeFileSync(productsFilePath,JSON.stringify(newProduct,null));
 		res.redirect('/')
 	},
+    create: function(req, res){
+
+        let img
+
+        if(req.files[0] != undefined){
+            img = req.files[0].filename;
+        }
+
+        let newProduct = {
+            id: products[products.length - 1].id + 1,
+            titulo: req.body.titulo,
+            img: img,
+            descripcion: req.body.descripcion,
+            descripcionLarga: req.body.descripcionLarga,
+            precio: req.body.precio
+        }
+        products.push(newProduct)
+		fs.writeFileSync(productsFilePath,JSON.stringify(products,null));
+        
+		res.redirect('/');
+    },
 }
 
 module.exports = mainController

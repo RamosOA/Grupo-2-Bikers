@@ -19,11 +19,11 @@
                 </div>
                 <h1 class="tituloProductosInteres">PRODUCTOS QUE TE PUEDEN INTERESAR</h1>
 
+                <div class="productosInteres">
+                    <% for(let i=0; i<accesorios.length; i++) { %>
 
-                <% for(let i=0; i<accesorios.length; i++) { %>
-                    <div class="productosInteres">
                         <div class="cuadritos">
-                            <img class="imagen" src="<%= accesorios[i].img %>" alt="mujeres">
+                            <img class="imagen" src="<%= accesorios[i].img %>" alt="<%= accesorios[i].descripcion %>">
                             <h4>
                                 <%= accesorios[i].descripcionLarga %>
                             </h4>
@@ -31,39 +31,10 @@
                                 <button type="submit">Ver productos</button>
                             </form>
                         </div>
-                    </div>
-                    <% }%>
 
-                        <!-- <div class="cuadritos">
-                        <img class="imagen"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLCkByxpG5YoA-X05CRKk7ZwhkleXXYG0_fw&usqp=CAU"
-                            alt="mujeres">
-                        <h4>Deja de cargar morrales en la espalda, liberate y compra un maletero.</h4>
-                        <form action="/detalleDeProducto">
-                            <button type="submit">Ver productos</button>
-                        </form>
-                    </div>
+                        <% }%>
+                </div>
 
-                    <div class="cuadritos">
-                        <img class="imagen" src="https://i.linio.com/p/79c39f550d3facf596f0140eb221935b-product.jpg"
-                            alt="mujeres">
-                        <h4>Porque la seguridadesta en tus manos, no las decuides y usa guantes.</h4>
-                        <form action="/detalleDeProducto">
-                            <button type="submit">Ver productos</button>
-                        </form>
-                    </div>
-
-                    <div class="cuadritos">
-                        <img class="imagen"
-                            src="https://ae01.alicdn.com/kf/H112474a899034cdab008547bca934ee3A/Chaqueta-de-motociclista-para-hombre-ropa-de-verano-de-malla-completa-protecci-n-transpirable-uglyBROS.jpg_Q90.jpg_.webp"
-                            alt="mujeres">
-                        <h4>Accede aquí a diferentes opciones en chaquetas moto con protección, que te brinden un mayor
-                            confort.
-                        </h4>
-                        <form action="/detalleDeProducto">
-                            <button type="submit">Ver productos</button>
-                        </form>
-                    </div> -->
             </main>
 
             <%- include('./partial/footer.ejs') %>
