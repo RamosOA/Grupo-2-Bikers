@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partial/head.ejs') %>
+    <title>Editar Bikers</title>
+
+    <body>
+        <%- include('./partial/header.ejs') %>
+            <main id="anadir">
+
+                <h2 class="titulo-añadir-producto">Editar producto</h2> <br>
+
+                <section class="inputs">
+                    <form method="POST" action="/productos/<%= productToEdit.id%>?_method=PATCH" class="input-group mb-3">
+                        <input id="titulo" name="titulo" value="<%= productToEdit.titulo%>" type="text" class="form-Articulo" placeholder="Articulo" aria-label="Server"><br>
+                        <div class="input-image">
+                            <label for="image" class="label-imagen">Ingresar imagen del producto</label>
+                            <input id="img" type="file" class="form-imagen" name="img">
+                        </div><br>
+                        <input id="descripcion" name="descripcion" value="<%= productToEdit.descripcion%>" type="text" class="form-text-2" aria-label="descripción corta del producto"
+                            placeholder="descripción corta del producto"><br>
+                        <input id="descripcionLarga" name="descripcionLarga" value="<%= productToEdit.descripcionLarga%>" type="text" class="form-text" aria-label="Amount (to the nearest dollar)"
+                            placeholder="descripción"><br>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">$</span>
+                            <input id="precio" name="precio" value="<%= productToEdit.precio%>" type="number" class="form-Dinero" aria-label="Amount (to the nearest dollar)">
+                            <span class="input-group-text">.00</span>
+                        </div><br>
+
+                        <button type="submit" class="boton-crearProducto">Editar producto</button>
+                    </form>
+
+                </section>
+
+            </main>
+
+            <%- include('./partial/footer.ejs') %>
+
+    </body>
+
+</html>

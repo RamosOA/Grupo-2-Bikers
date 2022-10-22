@@ -19,8 +19,6 @@ const mainController = {
         res.render('login');
       },
 
-
-
 }
 
 module.exports = mainController
