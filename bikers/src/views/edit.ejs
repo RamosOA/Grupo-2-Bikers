@@ -29,6 +29,9 @@
 
                         <button type="submit" class="boton-crearProducto">Editar producto</button>
                     </form>
+                    <form action="/productos/<%= productToEdit.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                        <button type="submit" class="boton-crearProducto">ELIMINAR</button>
+                    </form>
 
                 </section>
 
