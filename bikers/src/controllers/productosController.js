@@ -8,7 +8,8 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const mainController = {
 
     detalle: (req, res) => {
-    let producto = products.find(producto => producto.id == req.params.id)
+    let producto = products.find(producto => producto.id == req.params.id);
+   /*  producto.img= req.filename */
     res.render('detalle', {producto:producto})
 },
 
