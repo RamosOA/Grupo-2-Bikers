@@ -29,7 +29,6 @@ const userController = {
 
         res.redirect('/');
     },
-
 }
 
 module.exports = userController

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partial/head.ejs') %>
+    <title>B of Bikers</title>
+
+    <body>
+
+        <%- include('./partial/header.ejs') %>
+
+
+            <!--////////////////////////////////////////////////////////////// INICIO MAIN ////////////////////////////////////////////////////////-->
+
+            <main>
+                <div class="anuncio">
+                    <a class="anuncioa" href="/productos/detalle"><img class="propagandita"
+                            src="\images\img\propagandita.PNG" alt="anuncio"></a>
+
+                </div>
+                <h1 class="tituloProductosInteres">PRODUCTOS QUE TE PUEDEN INTERESAR</h1>
+
+                <div class="productosInteres">
+                    <% for(let i=0; i<accesorios.length; i++) { %>
+
+                        <div class="cuadritos">
+                            <img class="imagen" src="\images\img\<%= accesorios[i].img %>" alt="<%= accesorios[i].descripcion %>">
+                            <h4>
+                                <%= accesorios[i].descripcionLarga %>
+                            </h4>
+                            <form action="/productos/detalle/<%= accesorios[i].id %>">
+                                <button type="submit">Ver productos</button>
+                            </form>
+                        </div>
+
+                        <% }%>
+                </div>
+
+            </main>
+
+            <%- include('./partial/footer.ejs') %>
+
+    </body>
+
+</html>
