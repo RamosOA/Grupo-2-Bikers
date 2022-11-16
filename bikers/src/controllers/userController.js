@@ -1,34 +1,43 @@
 const fs = require('fs');
 const path = require('path');
+const bcrypt = require('bcryptjs');
 
-const productsFilePath = path.join(__dirname, '../data/users.json');
-const Users = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const usersFilePath = path.join(__dirname, '../data/users.json');
+const user = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const userController = {
-    register: function(req, res) {
-        res.render('register');
-      },
-    create: function(req, res){
-
-        l/* et img
-
-        if(req.files[0] != undefined){
-            img = req.files[0].filename;
-        } */
-
-        let newUser = {
-            id: Users[Users.length - 1].id + 1,
+create: function(req, res){
+    let newUser
+    let contra
+    try {
+        if (req.body.password == req.body.confirm_password){
+            contra = req.body.password;
+            
+            newUser = {
+            id: user[user.length - 1].id + 1,
             nombre: req.body.name,
             apellido: req.body.last_name,
             email: req.body.email,
-            password: req.body.password,
+            password: bcrypt.hashSync(contra, 10),
+            categoria: req.body.categoria
         }
+        
+        
 
-        Users.push(newUser)
-        fs.writeFileSync(productsFilePath,JSON.stringify(Users,null));
-
+        user.push(newUser)
+        fs.writeFileSync(usersFilePath,JSON.stringify(user,null));
+        
         res.redirect('/');
-    },
+        } 
+        else{
+            res.redirect('/singUp')
+        }
+    
+            
+    } catch (error) {
+        res.redirect('/singUp')
+    }
+},
 }
 
-module.exports = userController
+module.exports = userController;

@@ -8,7 +8,7 @@ var session = require('express-session')
 
 var mainRouter = require('./src/routes/main.js');
 var productsRouter = require('./src/routes/productos.js');
-var usersRouter = require('./src/routes/users.js');
+
 
 
 var app = express();
@@ -27,7 +27,6 @@ app.use(session({secret: 'secreto'}))
 
 app.use('/', mainRouter);
 app.use('/productos', productsRouter);
-app.use('/singUp', usersRouter);
 
 // // catch 404 and forward to error handler
 // app.use(function(req, res, next) {
