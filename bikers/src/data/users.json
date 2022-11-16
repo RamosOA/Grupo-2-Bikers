@@ -22,5 +22,13 @@
         "email": "cesar123@gmail.com",
         "password": "123Cesar",
         "categoria": "user"
+    },
+    {
+        "id": 4,
+        "nombre": "Practica final SO",
+        "apellido": "Acosta Ramos",
+        "email": "oscara22a.r@gmail.com",
+        "password": "$2a$10$15DcbjK.UaexF7A5cs0wQO0LCLCTuLgZuce/AtuM9ds0W.vYe9mGy",
+        "categoria": "admin"
     }
 ]

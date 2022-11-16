@@ -22,6 +22,7 @@ create: function(req, res){
             categoria: req.body.categoria
         }
         
+        
 
         user.push(newUser)
         fs.writeFileSync(usersFilePath,JSON.stringify(user,null));
