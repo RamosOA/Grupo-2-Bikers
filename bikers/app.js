@@ -7,7 +7,7 @@ const methodOverride =  require('method-override');
 
 var mainRouter = require('./src/routes/main.js');
 var productsRouter = require('./src/routes/productos.js');
-var usersRouter = require('./src/routes/users.js');
+
 
 
 var app = express();
@@ -25,7 +25,6 @@ app.use(methodOverride('_method'));
 
 app.use('/', mainRouter);
 app.use('/productos', productsRouter);
-app.use('/singUp', usersRouter);
 
 // // catch 404 and forward to error handler
 // app.use(function(req, res, next) {
