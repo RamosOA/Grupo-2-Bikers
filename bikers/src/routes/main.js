@@ -7,7 +7,7 @@ const validacionRegistro = require('../middleware/middlewareRegistro');
 
 /* GET home page. */
 router.get('/', mainController.home);
-router.get('/register', mainController.register);
+router.get('/singUP', mainController.register);
 router.post('/', validacionRegistro ,userController.create);
 router.get('/login', mainController.login);
 
