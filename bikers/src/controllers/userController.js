@@ -6,7 +6,6 @@ const usersFilePath = path.join(__dirname, '../data/users.json');
 const user = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const userController = {
-
 create: function(req, res){
     let newUser
     let contra

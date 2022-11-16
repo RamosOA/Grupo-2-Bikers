@@ -1,34 +1,42 @@
 [
-    {
-        "id": 1,
-        "titulo": "Casco",
-        "img": "casco.png",
-        "descripcion": "Casco para hombre",
-        "descripcionLarga": "Cuida tu integridad fisica y usa un casco de calidad",
-        "precio": "250.000"
-    },
-    {
-        "id": 2,
-        "titulo": "Chaquetadasdadsad",
-        "img": "chaqueta.webp",
-        "descripcion": "sfdasdas",
-        "descripcionLarga": "asdasdas",
-        "precio": "323432"
-    },
-    {
-        "id": 3,
-        "titulo": "Guantes",
-        "descripcion": "Talla L",
-        "descripcionLarga": "Porque la seguridad esta en tus manos, no las decuides y usa guantes.",
-        "precio": 400,
-        "img": "guantes.jpg"
-    },
-    {
-        "id": 4,
-        "titulo": "Maleta",
-        "descripcion": "Maleta de 40 Lt",
-        "descripcionLarga": "Accede aquí a diferentes opciones en chaquetas moto con protección, que te brinden un mayor confort.",
-        "precio": 90,
-        "img": "maletas.jpg"
-    }
+  {
+    "id": 1,
+    "titulo": "Casco",
+    "img": "casco.png",
+    "descripcion": "Casco para hombre",
+    "descripcionLarga": "Cuida tu integridad fisica y usa un casco de calidad",
+    "precio": "250.000"
+  },
+  {
+    "id": 2,
+    "titulo": "Chaquetadasdadsad",
+    "img": "chaqueta.webp",
+    "descripcion": "sfdasdas",
+    "descripcionLarga": "asdasdas",
+    "precio": "323432"
+  },
+  {
+    "id": 3,
+    "titulo": "Guantes",
+    "descripcion": "Talla L",
+    "descripcionLarga": "Porque la seguridad esta en tus manos, no las decuides y usa guantes.",
+    "precio": 400,
+    "img": "guantes.jpg"
+  },
+  {
+    "id": 4,
+    "titulo": "Maleta",
+    "descripcion": "Maleta de 40 Lt",
+    "descripcionLarga": "Accede aquí a diferentes opciones en chaquetas moto con protección, que te brinden un mayor confort.",
+    "precio": 90,
+    "img": "maletas.jpg"
+  },
+  {
+    "id": 5,
+    "titulo": "carro ",
+    "img": "1667228982405.jpeg",
+    "descripcion": "maleta",
+    "descripcionLarga": "descripcionLarga",
+    "precio": "159"
+  }
 ]

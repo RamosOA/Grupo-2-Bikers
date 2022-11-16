@@ -19,7 +19,7 @@ let upload = multer({ storage: storage })
 /* GET home page. */
 router.get('/detalle/:id', productosController.detalle);
 router.get('/carrito', productosController.carritoView);
-router.get('/anadir', productosController.anadir);
+
 router.get('/:id/edit', productosController.edit);
 router.patch('/:id',upload.any() , productosController.update);
 
