@@ -20,7 +20,6 @@
   },
   "description": "Bienvenido a **B of Biker**, el principal portal de internet que te ofrece la mas amplia seleccion y variedad de los mejores accesorios para motociclistas.",
   "main": "app.js",
-  "devDependencies": {},
   "keywords": [],
   "author": "",
   "license": "ISC"

@@ -22,7 +22,12 @@ create: function(req, res){
             categoria: req.body.categoria
         }
         
-        
+        // for(let i=0; i<=user.length; i++){
+
+        //     if(user[i].email == req.body.email){
+        //         error
+        //     }
+        // }
 
         user.push(newUser)
         fs.writeFileSync(usersFilePath,JSON.stringify(user,null));

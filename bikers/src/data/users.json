@@ -1,34 +1,42 @@
 [
-    {
-        "id": 1,
-        "nombre": "Oscar",
-        "apellido": "Ramos",
-        "email": "oscar123@gmail.com",
-        "password": "123Oscar",
-        "categoria": "admin"
-    },
-    {
-        "id": 2,
-        "nombre": "Diego",
-        "apellido": "Porto",
-        "email": "diego123@gmail.com",
-        "password": "123Diego",
-        "categoria": "user"
-    },
-    {
-        "id": 3,
-        "nombre": "Cesar",
-        "apellido": "Rua",
-        "email": "cesar123@gmail.com",
-        "password": "123Cesar",
-        "categoria": "user"
-    },
-    {
-        "id": 4,
-        "nombre": "Practica final SO",
-        "apellido": "Acosta Ramos",
-        "email": "oscara22a.r@gmail.com",
-        "password": "$2a$10$15DcbjK.UaexF7A5cs0wQO0LCLCTuLgZuce/AtuM9ds0W.vYe9mGy",
-        "categoria": "admin"
-    }
+  {
+    "id": 1,
+    "nombre": "Oscar",
+    "apellido": "Ramos",
+    "email": "oscar123@gmail.com",
+    "password": "123Oscar",
+    "categoria": "admin"
+  },
+  {
+    "id": 2,
+    "nombre": "Diego",
+    "apellido": "Porto",
+    "email": "diego123@gmail.com",
+    "password": "123Diego",
+    "categoria": "user"
+  },
+  {
+    "id": 3,
+    "nombre": "Cesar",
+    "apellido": "Rua",
+    "email": "cesar123@gmail.com",
+    "password": "123Cesar",
+    "categoria": "user"
+  },
+  {
+    "id": 4,
+    "nombre": "Practica final SO",
+    "apellido": "Acosta Ramos",
+    "email": "oscara22a.r@gmail.com",
+    "password": "$2a$10$15DcbjK.UaexF7A5cs0wQO0LCLCTuLgZuce/AtuM9ds0W.vYe9mGy",
+    "categoria": "admin"
+  },
+  {
+    "id": 5,
+    "nombre": "Diego ",
+    "apellido": "Porto Ramos",
+    "email": "dporto@unal.edu.co",
+    "password": "$2a$10$eglDEEEKSaVMBz7f06Dm/eUc4TwRfUZ1YUBMiThyn4/k9cX9MzaZG",
+    "categoria": "admin"
+  }
 ]
