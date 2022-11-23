@@ -24,7 +24,7 @@ router.get('/:id/edit', productosController.edit);
 router.patch('/:id',upload.any() , productosController.update);
 
 router.get('/create', productosController.anadir);
-router.post('/create', upload.any(),  productosController.create);
+router.post('/create', upload.any(), productosController.create);
 router.delete('/:id', productosController.destroy); 
 
     

@@ -23,6 +23,11 @@
 
 }
 
+.text-danger {
+    color: red;
+    font-size: small;
+}
+
 .NameUser input {
     border-radius: 0.3rem;
     border: none;
