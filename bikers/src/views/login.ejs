@@ -12,21 +12,22 @@
 
                 <form class="NameUser" action="/admin" method="POST">
                     <label for="Usuario"></label>
-                    <input type="text" placeholder="Email" name="login_name" value="<%= locals.oldData ? oldData.login_name : null %>"><br>
+                    <input type="text" placeholder="Email" name="login_name"
+                        value="<%= locals.oldData ? oldData.login_name : null %>"><br>
                     <% if (locals.errors && errors.login_name) { %>
                         <div class="text-danger">
-                            <%= errors.login_name.msg %> 
+                            <%= errors.login_name.msg %>
                         </div>
-                    <% } %>
-                    <label for="Password"></label>
-                    <input class="password" type="text" placeholder="Contraseña" name="login_password"><br>
-                    <% if (locals.errors && errors.login_password) { %>
-                        <div class="text-danger">
-                            <%= errors.login_password.msg %> 
-                        </div>
-                    <% } %>
-                    <button type="submit" value="Enviar" class="Enviar">Ingresar</button>
-                </form> 
+                        <% } %>
+                            <label for="Password"></label>
+                            <input class="password" type="text" placeholder="Contraseña" name="login_password"><br>
+                            <% if (locals.errors && errors.login_password) { %>
+                                <div class="text-danger">
+                                    <%= errors.login_password.msg %>
+                                </div>
+                                <% } %>
+                                    <button type="submit" value="Enviar" class="Enviar">Ingresar</button>
+                </form>
 
             </main>
             <%- include('./partial/footer.ejs') %>
