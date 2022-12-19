@@ -1,11 +1,11 @@
 var express = require('express');
 var router = express.Router();
 const mainController = require('../controllers/mainControllers')
-const adminMiddleware = require('../middleware/admin')
-// const mainController = require('../controllers/mainControllers');
+const guessMiddleware = require('../middleware/guessMiddleware')
 const userController = require('../controllers/userController');
+
 const validacionRegistro = require('../middleware/middlewareRegistro');
-const { body } = require('express-validator')
+const { body } = require('express-validator');
 
 const validations = [
     body('login_name').notEmpty().withMessage('*Debes agregar un email').bail()
@@ -16,11 +16,11 @@ const validations = [
 
 /* GET home page. */
 router.get('/', mainController.home);
-router.get('/singUP', mainController.register);
+router.get('/singUP', guessMiddleware, mainController.register);
 router.post('/', validacionRegistro ,userController.create);
-router.get('/login', mainController.login);
-router.post('/admin', validations, mainController.admin);
-
+router.get('/login', guessMiddleware, mainController.login);
+router.post('/login', validations, mainController.admin);
+router.get('/logout', mainController.logout)
 // router.get()
 
 module.exports = router;

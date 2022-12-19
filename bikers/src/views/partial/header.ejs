@@ -5,15 +5,27 @@
 
         <section class="header-derecho">
             <section class="ul-and-shopping">
+                <% if (locals.isLogged) { %>
+                 
+                    <ul class="CONTÁCTENOS">
+                        <li class="item-nav-pricipal">CONTÁCTENOS</li>
+                        <a href="\singUp" class="subrayado">
+                            <li class="item-nav-pricipal">Sing-UP</li>
+                        </a>
+                        <a href="\login" class="subrayado">
+                            <li class="item-nav-pricipal">Log-IN</li>
+                        </a>
+                    </ul>
+
+                <% } else { %>
                 <ul class="CONTÁCTENOS">
                     <li class="item-nav-pricipal">CONTÁCTENOS</li>
-                    <a href="\singUp" class="subrayado">
-                        <li class="item-nav-pricipal">Sing-UP</li>
-                    </a>
-                    <a href="\login" class="subrayado">
-                        <li class="item-nav-pricipal">Log-IN</li>
+                    <a href="\logout" class="subrayado">
+                        <li class="item-nav-pricipal">Logout</li>
                     </a>
                 </ul>
+                <% } %>
+
                 <form action="\productos\carrito"><button class="boton-shopping1" type="submit"></button></form>
             </section>
             <form action="" class="input-header">
@@ -33,19 +45,34 @@
             <div><button class="burguer-menu" type="button"></button></div>
             <p id="PalabraMenú">MENÚ</p>
         </section>
-        <ul class="header-nav-items">
-            <li class="items">ACCESORIO</li>
-            <li class="items">CASCOS</li>
-            <li class="items">MALETAS</li>
-            <li class="items">DRYBAGS</li>
-            <li class="items">PILOTOS</li>
-            <li class="items">IMPERMEABLE</li>
-            <li class="items">INTERCOMS</li>
-            <li class="items">ESENCIALES</li>
-            <!-- <a href="/productos/create" class="añadir-producto-nav-header">
-                <li class="items">AÑADIR PRODUCTOS</li>
-            </a> -->
-        </ul>
+        <% if (locals.isLogged) { %>
+         
+            <ul class="header-nav-items">
+                <li class="items">ACCESORIO</li>
+                <li class="items">CASCOS</li>
+                <li class="items">MALETAS</li>
+                <li class="items">DRYBAGS</li>
+                <li class="items">PILOTOS</li>
+                <li class="items">IMPERMEABLE</li>
+                <li class="items">INTERCOMS</li>
+                <li class="items">ESENCIALES</li>
+                </a>
+            </ul>
+        <% } else { %> 
+            <ul class="header-nav-items">
+                <li class="items">ACCESORIO</li>
+                <li class="items">CASCOS</li>
+                <li class="items">MALETAS</li>
+                <li class="items">DRYBAGS</li>
+                <li class="items">PILOTOS</li>
+                <li class="items">IMPERMEABLE</li>
+                <li class="items">INTERCOMS</li>
+                <li class="items">ESENCIALES</li>
+                <a href="/productos/create" class="añadir-producto-nav-header">
+                    <li class="items">AÑADIR PRODUCTOS</li>
+                </a>
+            </ul>
+        <% } %> 
         <section class="shopping-busqueda">
             <div><button class="boton-busqueda" type="button"></button></div>
             <div><button class="boton-shopping" type="button"></button></div>

@@ -20,13 +20,22 @@
                         </p>
                         <p class="precio">$ <%=producto.precio%>
                         </p>
+                        <% if (locals.isLogged) { %>
                         <section class="cantidadYCarrito">
                             <button class="boton-carrito" type="submit" data-id="<%=producto.id%>">Agregar al
                                 carrito</button>
-                            <form action="/productos/<%=producto.id%>/edit">
-                                <button type="submit" class="boton-editarProducto">Editar</button>
-                            </form>
                         </section>
+                        <% } else { %>
+
+                            <section class="cantidadYCarrito">
+                                <button class="boton-carrito" type="submit" data-id="<%=producto.id%>">Agregar al
+                                    carrito</button>
+                                <form action="/productos/<%=producto.id%>/edit">
+                                    <button type="submit" class="boton-editarProducto">Editar</button>
+                                </form>
+                            </section>
+
+                        <% } %>
                     </div>
                 </section>
             </main>

@@ -1,9 +1,15 @@
 const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator')
+const adminMiddleware = require('../middleware/admin');
+const admins = require('../middleware/admin');
+const bcryptjs = require('bcryptjs');
 
 const productsFilePath = path.join(__dirname, '../data/database.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+const usersFilePath = path.join(__dirname, '../data/users.json');
+const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const mainController = {
 
@@ -19,7 +25,8 @@ const mainController = {
         res.render('login');
       }, 
 
-    admin: function(req, res) { 
+    admin: function(req, res) {
+
       const resultValidation = validationResult(req);
 
       if(resultValidation.errors.length > 0){
@@ -27,10 +34,47 @@ const mainController = {
           errors: resultValidation.mapped(),
           oldData: req.body
         });
-      }else{
-        res.render('adminUser',{accesorios:products})
       }
+
+      let userInDB = admins.findByFiel(req.body.login_name)
+
+      if (userInDB) {
+        let isOkThePassword = bcryptjs.compareSync(req.body.login_password, userInDB.password)
+        if(isOkThePassword){
+          delete userInDB.login_password
+          req.session.userLogged = userInDB
+
+          if(req.body.remember_user){
+            res.cookie('userEmail', req.body.login_name, {maxAge: (1000*60)*60})
+          }
+
+          return  res.redirect("/")
+        }
+        return res.render('login', {
+          errors: {
+            login_name: {
+              msg: "*Las credenciales son inválidas"
+            }
+          },
+          oldData: req.body
+        });
+      }
+      return res.render('login', {  
+        errors: {
+          login_name: {
+            msg: "*Este email no está registrado"
+          }
+        },
+        oldData: req.body
+      });
+      
     },
+
+    logout: function(req,res){
+      res.clearCookie('userEmail')
+      req.session.destroy();
+      return res.redirect('/')
+    }
 
 }
 
