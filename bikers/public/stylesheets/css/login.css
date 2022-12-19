@@ -26,6 +26,7 @@
 .text-danger {
     color: red;
     font-size: small;
+    text-align: center;
 }
 
 .NameUser input {

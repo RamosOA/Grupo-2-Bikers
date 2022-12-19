@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcryptjs');
-
+const { validationResult } = require('express-validator')
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const user = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
@@ -9,6 +9,7 @@ const userController = {
 create: function(req, res){
     let newUser
     let contra
+    const resultValidation = validationResult(req); 
     try {
         if (req.body.password == req.body.confirm_password){
             contra = req.body.password;
@@ -20,24 +21,32 @@ create: function(req, res){
             email: req.body.email,
             password: bcrypt.hashSync(contra, 10),
             categoria: req.body.categoria
-        }
+            }
         
-        // for(let i=0; i<=user.length; i++){
+            let isLogged = false
+            for(var i = 0; i < user.length ; i++){
+                if(user[i].email == newUser.email){
+                    isLogged = true
+                }
+            }
 
-        //     if(user[i].email == req.body.email){
-        //         error
-        //     }
-        // }
 
-        user.push(newUser)
-        fs.writeFileSync(usersFilePath,JSON.stringify(user,null));
+            
+            if(resultValidation.errors.length > 0){
+                return res.render('register', {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+                });
+            }
+            if (!isLogged) {
+                user.push(newUser)
+                fs.writeFileSync(usersFilePath,JSON.stringify(user,null));
         
-        res.redirect('/');
-        } 
-        else{
-            res.redirect('/singUp')
-        }
-    
+                res.redirect('/');
+            }
+            }else{
+                res.render('register')
+            }
             
     } catch (error) {
         res.redirect('/singUp')
