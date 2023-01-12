@@ -1,10 +1,10 @@
-const admins = require('./admin');
+const findByEmail = require('./admin');
 
 function userLoggedMiddleware(req, res, next) {
     res.locals.isLogged = true;
     
     let emailInCookie = req.cookies.userEmail
-    let userFromCookie = admins.findByFiel(emailInCookie)
+    let userFromCookie = findByEmail(emailInCookie)
 
     // console.log(userFromCookie)
 

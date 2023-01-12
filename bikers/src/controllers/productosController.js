@@ -1,16 +1,19 @@
 const fs = require('fs');
 const path = require('path');
+const { where } = require('sequelize');
 
 const productsFilePath = path.join(__dirname, '../data/database.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
+const db = require('../database/models')
 
 const mainController = {
 
     detalle: (req, res) => {
-    let producto = products.find(producto => producto.id == req.params.id);
-   /*  producto.img= req.filename */
-    res.render('detalle', {producto:producto})
+
+    db.Products.findByPk(req.params.id)
+        .then(function(producto){
+            res.render('detalle', {producto:producto})
+        })
 },
 
     carrito: (req, res) => {
@@ -26,59 +29,50 @@ const mainController = {
     },
 
     edit: function(req, res) {
-        let productToEdit = products.find(product => product.id == req.params.id)
-		console.log(productToEdit);
-        res.render('edit',{productToEdit});
+
+        db.Products.findByPk(req.params.id)
+            .then(function(productToEdit){
+                res.render('edit',{productToEdit});
+            })
+
+        // let productToEdit = products.find(product => product.id == req.params.id)
+		// console.log(productToEdit);
+        // res.render('edit',{productToEdit});
     },
 
     update: (req, res) => {
-        console.log(req.body)
-		let productToUpdate = products.find(product => product.id == req.params.id)
-		let image
-		if(req.files != undefined){
-			image = req.files[0].filename;	
-		}else{
-			image = productToUpdate.img;
-		}
-		let NewProductToUpdate = {
-			id: productToUpdate.id,
-			...req.body,
-			img: image,
-		}
-		let newProduct = products.map(product =>{
-			if (product.id == NewProductToUpdate.id){
-				return product = {...NewProductToUpdate}
-			} 
-			return product;
-		})
-        console.log(newProduct)
-		fs.writeFileSync(productsFilePath,JSON.stringify(newProduct,null));
-		res.redirect('/')
+
+        db.Products.update({
+            name: req.body.name,
+            price: req.body.price,
+            image: req.body.img,
+            description: req.body.description
+        }, {
+            where: {
+                id: req.params.id
+            }
+        })
+        res.redirect('/')
 	},
     create: function(req, res){
 
-        let img
+        db.Products.create({
+            name: req.body.name,
+            price: req.body.price,
+            image: req.body.img,
+            description: req.body.description
+        })
 
-        if(req.files[0] != undefined){
-            img = req.files[0].filename;
-        }
-
-        let newProduct = {
-            id: products[products.length - 1].id + 1,
-            titulo: req.body.titulo,
-            img: img,
-            descripcion: req.body.descripcion,
-            descripcionLarga: req.body.descripcionLarga,
-            precio: req.body.precio
-        }
-        products.push(newProduct)
-		fs.writeFileSync(productsFilePath,JSON.stringify(products,null));
-        
 		res.redirect('/');
     },
 	destroy : (req, res) => {
-		let productosFiltrados = products.filter(product => product.id != req.params.id)
-		fs.writeFileSync(productsFilePath,JSON.stringify(productosFiltrados,null," "));
+
+        db.Products.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+
 		res.redirect('/')
 	}
 }

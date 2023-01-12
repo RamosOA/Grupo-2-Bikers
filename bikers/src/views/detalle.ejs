@@ -10,15 +10,15 @@
             <!--//////////////////////////////////////////////////// inicio main ////////////////////////////////////////////////////////////-->
             <main>
                 <section class="div-contenedorPrincipal">
-                    <img src="images/img/<%=producto.img%>" alt="<%=producto.titulo%>">
+                    <img src="images/img/<%=producto.img%>" alt="<%=producto.name%>">
                     <div class="div-contenedor-texto">
                         <h3 class="nombre-del-producto">
-                            <%=producto.titulo%>
+                            <%=producto.name%>
                         </h3>
                         <p class="contenedor-descripcionDelProducto">
-                            <%=producto.descripcion%>
+                            <%=producto.description%>
                         </p>
-                        <p class="precio">$ <%=producto.precio%>
+                        <p class="precio">$ <%=producto.price%>
                         </p>
                         <% if (locals.isLogged) { %>
                         <section class="cantidadYCarrito">
