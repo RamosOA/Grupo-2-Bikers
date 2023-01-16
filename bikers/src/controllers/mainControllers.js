@@ -1,12 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator')
-const adminMiddleware = require('../middleware/admin');
-const findByEmail = require('../middleware/admin');
 const bcryptjs = require('bcryptjs');
 
-const productsFilePath = path.join(__dirname, '../data/database.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+// const productsFilePath = path.join(__dirname, '../data/database.json');
+// const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -31,8 +29,9 @@ const mainController = {
         res.render('login');
       }, 
 
-    admin: function(req, res) {
+    admin: async function(req, res) {
 
+    
       const resultValidation = validationResult(req);
 
       if(resultValidation.errors.length > 0){
@@ -42,8 +41,27 @@ const mainController = {
         });
       }
 
-      let userInDB = findByEmail(req.body.login_name)
+      let userInDB = await db.User.findOne({
+            where: {
+              email: req.body.login_name
+            }
+          })
 
+      // console.log('********************************** '+userInDB+' *****************************************')
+
+      // function findByFiel (correo){
+      //   let userFound = users.find(oneUser => oneUser.email == correo)
+      //   return userFound  
+      // }
+
+      
+      // let prueba = findByFiel('pepito@gmail.com')
+      
+      // console.log('#################################### '+prueba+' #######################################')
+
+      // let userInDB = findByFiel(req.body.login_name)
+      // console.log("########################## "+userInDB.email+ "####################################")
+      
       if (userInDB) {
         let isOkThePassword = bcryptjs.compareSync(req.body.login_password, userInDB.password)
         if(isOkThePassword){
@@ -73,7 +91,6 @@ const mainController = {
         },
         oldData: req.body
       });
-      
     },
 
     logout: function(req,res){

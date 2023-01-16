@@ -8,7 +8,7 @@ const db = require('../database/models');
 
 const userController = {
     create:  async function(req, res){
-        let contra
+        let contra;
         const resultValidation = validationResult(req); 
         try {
             if (req.body.password == req.body.confirm_password){
