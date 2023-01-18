@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { where } = require('sequelize');
+// const { validationResult } = require('express-validator')
 
 const productsFilePath = path.join(__dirname, '../data/database.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -42,6 +43,15 @@ const mainController = {
 
     update: (req, res) => {
 
+        // const resultValidation = validationResult(req); 
+
+         // if(resultValidation.errors.length > 0){
+        //     return res.render('anadirProducto', {
+        //     errors: resultValidation.mapped(),
+        //     oldData: req.body
+        //     });
+        // }
+
         db.Products.update({
             name: req.body.name,
             price: req.body.price,
@@ -52,18 +62,42 @@ const mainController = {
                 id: req.params.id
             }
         })
+
+       
+
+        // db.Category_products.update({
+        //     name: req.body.category
+        // }, {
+        //     where: 
+        //         db.Products.id = req.params.id
+        // })
+
         res.redirect('/')
 	},
     create: function(req, res){
+        
+        // const resultValidation = validationResult(req);
 
-        db.Products.create({
+        // if(resultValidation.errors.length > 0){
+        //     return res.render('anadirProducto', {
+        //     errors: resultValidation.mapped(),
+        //     oldData: req.body
+        //     });
+        // } 
+
+        const created = db.Products.create({
             name: req.body.name,
             price: req.body.price,
             image: req.body.img,
             description: req.body.description
         })
+            if (created) {
+                res.redirect('/');
+            } else {
+                res.resnder('anadirProducto')
+            }	
+        
 
-		res.redirect('/');
     },
 	destroy : (req, res) => {
 

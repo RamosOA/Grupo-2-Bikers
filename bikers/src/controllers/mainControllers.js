@@ -1,13 +1,13 @@
-const fs = require('fs');
-const path = require('path');
+// const fs = require('fs');
+// const path = require('path');
 const { validationResult } = require('express-validator')
 const bcryptjs = require('bcryptjs');
 
 // const productsFilePath = path.join(__dirname, '../data/database.json');
 // const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-const usersFilePath = path.join(__dirname, '../data/users.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+// const usersFilePath = path.join(__dirname, '../data/users.json');
+// const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const db = require('../database/models')
 
@@ -15,7 +15,9 @@ const mainController = {
 
     home: function(req, res) {
 
-      db.Products.findAll()
+      db.Products.findAll({
+        include: [{association: 'category'}]
+      })
         .then(function(accesorios){
           res.render('home',{accesorios:accesorios});
         })
@@ -47,7 +49,7 @@ const mainController = {
             }
           })
 
-      // console.log('********************************** '+userInDB+' *****************************************')
+      // console.log('********************************** '+userInDB.pas+' *****************************************')
 
       // function findByFiel (correo){
       //   let userFound = users.find(oneUser => oneUser.email == correo)
@@ -63,7 +65,7 @@ const mainController = {
       // console.log("########################## "+userInDB.email+ "####################################")
       
       if (userInDB) {
-        let isOkThePassword = bcryptjs.compareSync(req.body.login_password, userInDB.password)
+        let isOkThePassword = bcryptjs.compare(req.body.login_password, userInDB.password)
         if(isOkThePassword){
           delete userInDB.login_password
           req.session.userLogged = userInDB
