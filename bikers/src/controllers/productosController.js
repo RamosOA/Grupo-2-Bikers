@@ -59,11 +59,13 @@ const mainController = {
         db.Products.create({
             name: req.body.name,
             price: req.body.price,
-            image: req.body.img,
+            image: req.file ? req.file.filename : null,
             description: req.body.description
         })
+        .then(() => {
+            res.redirect('/');
+        })
 
-		res.redirect('/');
     },
 	destroy : (req, res) => {
 

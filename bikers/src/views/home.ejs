@@ -17,13 +17,14 @@
                             src="\images\img\propagandita.PNG" alt="anuncio"></a>
 
                 </div>
+                <script src="/js/js-front.js"></script>
                 <h1 class="tituloProductosInteres">PRODUCTOS QUE TE PUEDEN INTERESAR</h1>
 
                 <div class="productosInteres">
                     <% for(let i=0; i<accesorios.length; i++) { %>
 
                         <div class="cuadritos">
-                            <img class="imagen" src="\images\img\<%=accesorios[i].img%>" alt="<%=accesorios[i].descripcion%>">
+                            <img class="imagen" src="\images\img\<%=accesorios[i].image%>" alt="<%=accesorios[i].descripcion%>">
                             <h4>
                                 <%=accesorios[i].descripcionLarga%>
                             </h4>

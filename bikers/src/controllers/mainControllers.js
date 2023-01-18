@@ -68,9 +68,13 @@ const mainController = {
           delete userInDB.login_password
           req.session.userLogged = userInDB
 
+          // console.log(req.session);
+
           if(req.body.remember_user){
-            res.cookie('userEmail', req.body.login_name, {maxAge: (1000*60)*60})
+            res.cookie('userEmail', req.body.login_name, {maxAge: (1000*60)*2})
           }
+
+          // console.log("################################# "+req.cookies.userEmail+" #################################")
 
           return  res.redirect("/")
         }
