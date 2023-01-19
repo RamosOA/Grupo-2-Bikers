@@ -47,10 +47,6 @@ const mainController = {
             price: req.body.price,
             image: req.body.img,
             description: req.body.description
-        }, {
-            where: {
-                id: req.params.id
-            }
         })
         res.redirect('/')
 	},
