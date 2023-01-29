@@ -35,9 +35,11 @@ const userController = {
                 if (created) {
                     res.redirect('/');
                 } else {
-                    res.resnder('register')
+                    res.render('register')
                 }
 
+            }else{
+                res.render('register')
             }
         } catch (error) {
             res.redirect('/singUp')

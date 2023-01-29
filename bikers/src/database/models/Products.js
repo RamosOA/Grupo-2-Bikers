@@ -6,7 +6,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
-            allowNull: false
+            // allowNull: false
         },
         name: {
             type: dataTypes.STRING,
@@ -18,11 +18,7 @@ module.exports = (sequelize, dataTypes) => {
         },
         image: {
             type: dataTypes.STRING,
-            allowNull: false
-        },
-        category_id: {
-            type: dataTypes.INTEGER,
-            allowNull: false
+            // allowNull: false
         },
         description: {
             type: dataTypes.STRING,

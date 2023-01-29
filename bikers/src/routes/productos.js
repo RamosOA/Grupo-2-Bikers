@@ -24,10 +24,10 @@ router.get('/carrito', productosController.carritoView);
 
 // router.get('/:id/edit', guessMiddleware, productosController.edit);
 router.get('/:id/edit', productosController.edit);
-router.patch('/:id'/* ,validacionProducts */,upload.any() , productosController.update);
+router.patch('/:id', upload.single('image'), productosController.update);
 
 router.get('/create', productosController.anadir);
-router.post('/create',upload.any('img'), productosController.create);
+router.post('/create', upload.single('image'),productosController.create);
 router.delete('/:id', productosController.destroy); 
 
     

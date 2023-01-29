@@ -6,6 +6,8 @@ const productsFilePath = path.join(__dirname, '../data/database.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const db = require('../database/models')
 
+
+
 const mainController = {
 
     detalle: (req, res) => {
@@ -37,21 +39,27 @@ const mainController = {
 
         // let productToEdit = products.find(product => product.id == req.params.id)
 		// console.log(productToEdit);
-        // res.render('edit',{productToEdit});
+        // res.render('edit',{productToEdit});+
     },
 
     update: (req, res) => {
-
+        console.log(req.body);
         db.Products.update({
             name: req.body.name,
             price: req.body.price,
-            image: req.body.img,
+            image: req.file ? req.file.filename : null,
             description: req.body.description
+        },{
+            where:{
+                id: req.params.id
+            }
         })
-        res.redirect('/')
+        .then(() => {
+            res.redirect('/');
+        })
+
 	},
     create: function(req, res){
-
         db.Products.create({
             name: req.body.name,
             price: req.body.price,
@@ -61,7 +69,7 @@ const mainController = {
         .then(() => {
             res.redirect('/');
         })
-
+        
     },
 	destroy : (req, res) => {
 

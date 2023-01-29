@@ -8,11 +8,15 @@
         <%- include('./partial/header.ejs') %>
             <main class="main">
                 <h1 class="ingreso">Ingreso</h1>
-                <p class="leyend">Hola! ingresa tus credenciales para acceder a tu cuenta</p>
+                <p class="leyend">¡Hola! ingresa tus credenciales para acceder a tu cuenta</p>
+
+                <div class="text-danger">
+                    <ul></ul>
+                </div>
 
                 <form class="NameUser" action="/login" method="POST">
                     <label for="Usuario"></label>
-                    <input type="text" placeholder="Email" name="login_name"
+                    <input class="email" type="text" placeholder="Email" name="login_name"
                         value="<%= locals.oldData ? oldData.login_name : null %>"><br>
                     <% if (locals.errors && errors.login_name) { %>
                         <div class="text-danger">
@@ -37,6 +41,8 @@
                 </form> 
 
             </main>
+
+            <script src="/js/validacionLogin.js"></script>
             <%- include('./partial/footer.ejs') %>
     </body>
 
