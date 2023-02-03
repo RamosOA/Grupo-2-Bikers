@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+.header-uno {
+    text-align: center;
+    background-color: rgb(250, 0, 0);
+}
+
+.logo {
+    width: 30%;
+}
+
+.item-nav-pricipal {
+    display: none;
+    color: white;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    margin-top: 0.8rem;
+    justify-content: space-around;
+    text-decoration: none;
+}
+
+
+#PalabraMenú {
+    display: none;
+}
+
+.header-nav {
+    background-color: rgb(52, 52, 52);
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+}
+
+.header-nav-items {
+    color: rgb(255, 255, 255);
+    list-style: none;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    justify-content: space-around;
+    text-decoration: none;
+}
+
+.burguer-menu {
+    background: none;
+    color: rgb(255, 255, 255);
+    border: none;
+    font-size: 2rem;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    height: 2.2rem;
+    width: 2.2rem;
+    margin: 00.5rem;
+}
+
+
+
+
+@media (min-width: 300px) {
+    .header-nav-items {
+        display: none;
+    }
+
+    .header-nav {
+        justify-content: space-between;
+    }
+
+    .shopping-busqueda {
+        margin: 00.5rem;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .logo {
+        width: 30vw;
+        height: 5rem;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+
+
+}
+
+@media (min-width: 600px) {
+    #PalabraMenú {
+        display: block;
+        color: white;
+        align-self: center;
+        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+        font-weight: 700;
+    }
+
+    .burguer-and-menú {
+        display: flex;
+    }
+
+    .logo {
+        height: 7rem;
+    }
+}
+
+@media (min-width: 900px) {
+    .burguer-and-menú {
+        display: none;
+    }
+
+
+    .logo {
+        width: 20vw;
+    }
+
+    .boton-shopping {
+        display: none;
+    }
+
+    .boton-busqueda {
+        display: none;
+    }
+
+    .header-nav {
+        justify-content: space-around;
+    }
+
+    .header-nav-items {
+        display: block;
+        display: flex;
+        margin: 1rem 0;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .items {
+        font-size: 16px;
+        padding: 0 30px;
+        color: rgb(255, 255, 255);
+        list-style: none;
+        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+        font-weight: 700;
+        justify-content: space-around;
+        text-decoration: none;
+    }
+
+    .header-uno {
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 5vw;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .link{
+        text-decoration: none;
+    }
+}

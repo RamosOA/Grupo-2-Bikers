@@ -6,34 +6,38 @@
 
     <body>
         <%- include('./partial/header.ejs') %>
-            <main class="main1">
+        <!-- <script src="js/validationfrontregister.js"></script> -->
+            <main class="main1"> 
                 <h1 class="register">Registro</h1>
                 <p class="leyend">Por favor ingrese la información requerida para el registro</p>
+                <div class="text-danger">
+                    <p></p>
+                </div>
                 <form action="/" method="post" class="form">
                     <fieldset>
-                        <label>Nombres <input type="text" required name="name"
+                        <label>Nombres <input class="nameR" type="text"  name="name"
                                 value="<%= locals.oldData ? oldData.login_name : null %>"></label>
                         <% if (locals.errors && errors.name) { %>
                             <div class="text-danger">
                                 <%= errors.name.msg %>
                             </div>
                             <% } %>
-                                <label>Apellidos <input type="text" required name="last_name"></label>
+                                <label>Apellidos <input class="last_nameR" type="text"  name="last_name"></label>
                                 <% if (locals.errors && errors.last_name) { %>
                                     <div class="text-danger">
                                         <%= errors.last_name.msg %>
                                     </div>
                                     <% } %>
-                                        <label>E-mail <input type="email" required name="email"
+                                        <label>E-mail <input class="emailR" type="email"  name="email"
                                                 placeholder="@domain.com"></label>
                                         <% if (locals.errors && errors.email) { %>
                                             <div class="text-danger">
                                                 <%= errors.email.msg %>
                                             </div>
                                             <% } %>
-                                                <label>Contraseña <input type="password" required
+                                                <label>Contraseña <input class="passwordR" type="password" 
                                                         name="password"></label>
-                                                <label>Confirmar Contraseña <input type="password" required
+                                                <label>Confirmar Contraseña <input class="confirm_passwordR" type="password" 
                                                         name="confirm_password"></label>
                                                 <% if (locals.errors && errors.confirm_password) { %>
                                                     <div class="text-danger">
@@ -47,12 +51,14 @@
                                                         </select>
                     </fieldset>
                     <fieldset>
-                        <label><input class="inline" type="checkbox" required name="terms"> Acepto los <a
+                        <label><input class="inline" type="checkbox"  name="terms"> Acepto los <a
                                 href="#">Términos y
                                 Condiciones</a></label>
                     </fieldset>
                     <input type="submit" value="Enviar">
+                    
                 </form>
+                
             </main>
             <%- include('./partial/footer.ejs') %>
     </body>

@@ -38,6 +38,8 @@ const userController = {
                     res.resnder('register')
                 }
 
+            }else{
+                res.resnder('register');
             }
         } catch (error) {
             res.redirect('/singUp')

@@ -8,7 +8,8 @@ const validacionProducts = require('../middleware/middlewareProducts'); */
 
 let storage = multer.diskStorage({
     destination: function(req, file, cb){
-        cb(null, 'public/images/img')
+        let folder = path.join(__dirname, 'public/images/img')
+        cb(null,folder )
     },
     filename: function(req, file, cb){
         const newFileName =  Date.now() + path.extname(file.originalname)

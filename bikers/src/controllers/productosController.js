@@ -88,7 +88,7 @@ const mainController = {
         const created = db.Products.create({
             name: req.body.name,
             price: req.body.price,
-            image: req.body.img,
+            image: req.file ? req.file.filename : null,
             description: req.body.description
         })
             if (created) {

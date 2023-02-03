@@ -65,7 +65,7 @@ const mainController = {
       // console.log("########################## "+userInDB.email+ "####################################")
       
       if (userInDB) {
-        let isOkThePassword = bcryptjs.compare(req.body.login_password, userInDB.password)
+        let isOkThePassword = bcryptjs.compareSync(req.body.login_password, userInDB.password)
         if(isOkThePassword){
           delete userInDB.login_password
           req.session.userLogged = userInDB
