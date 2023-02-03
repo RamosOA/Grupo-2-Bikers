@@ -1,10 +1,10 @@
-// const fs = require('fs');
-// const path = require('path');
+const fs = require('fs');
+const path = require('path');
 const { validationResult } = require('express-validator')
 const bcryptjs = require('bcryptjs');
 
-// const productsFilePath = path.join(__dirname, '../data/database.json');
-// const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const productsFilePath = path.join(__dirname, '../data/database.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 // const usersFilePath = path.join(__dirname, '../data/users.json');
 // const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -67,12 +67,16 @@ const mainController = {
       if (userInDB) {
         let isOkThePassword = bcryptjs.compareSync(req.body.login_password, userInDB.password)
         if(isOkThePassword){
-          delete userInDB.login_password
+          // delete userInDB.login_password
           req.session.userLogged = userInDB
 
+          // console.log(req.session);
+
           if(req.body.remember_user){
-            res.cookie('userEmail', req.body.login_name, {maxAge: (1000*60)*60})
+            res.cookie('userEmail', req.body.login_name, {maxAge: (1000*60)*20})
           }
+
+          // console.log("################################# "+req.cookies.userEmail+" #################################")
 
           return  res.redirect("/")
         }

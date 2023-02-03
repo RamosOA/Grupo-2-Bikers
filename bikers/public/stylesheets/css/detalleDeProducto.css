@@ -39,6 +39,10 @@ img {
     margin-top: 2rem;
 }
 
+.imagenDetalle{
+    width: 180px;
+}
+
 .nombre-del-producto {
     text-align: center;
     font-weight: bold;
@@ -48,6 +52,7 @@ img {
 .contenedor-descripcionDelProducto {
     margin: 1rem;
     text-align: justify;
+    
 }
 
 .precio {

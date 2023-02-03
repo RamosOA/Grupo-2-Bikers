@@ -5,19 +5,24 @@ module.exports = (sequelize, dataTypes) => {
         id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
-            autoIncrement: true
+            autoIncrement: true,
+            // allowNull: false
         },
         name: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING,
+            allowNull: false
         },
         price: {
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER,
+            allowNull: false
         },
         image: {
             type: dataTypes.STRING,
+            // allowNull: false
         },
         description: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING,
+            allowNull: false
         }
     }
     let config = {

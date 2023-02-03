@@ -11,11 +11,11 @@
                 <h2 class="titulo-añadir-producto">Editar producto</h2> <br>
 
                 <section class="inputs">
-                    <form method="POST" action="/productos/<%= productToEdit.id%>?_method=PATCH" class="input-group mb-3">
+                    <form method="POST" action="/productos/<%= productToEdit.id%>?_method=PATCH" class="input-group mb-3" enctype="multipart/form-data">
                         <input id="titulo" name="name" value="<%= productToEdit.name%>" type="text" class="form-Articulo" placeholder="Articulo" aria-label="Server"><br>
                         <div class="input-image">
                             <label for="image" class="label-imagen">Ingresar imagen del producto</label>
-                            <input id="img" type="file" class="form-imagen" name="img">
+                            <input id="img" type="file" class="form-imagen" name="image" value="<%= productToEdit.image%>">
                         </div><br>
                         <input id="descripcion" name="category" value="<%= productToEdit.category%>" type="text" class="form-text-2" aria-label="descripción corta del producto"
                             placeholder="descripción corta del producto"><br>

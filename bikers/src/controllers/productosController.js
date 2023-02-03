@@ -1,11 +1,12 @@
 const fs = require('fs');
 const path = require('path');
 const { where } = require('sequelize');
-// const { validationResult } = require('express-validator')
 
 const productsFilePath = path.join(__dirname, '../data/database.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const db = require('../database/models')
+
+
 
 const mainController = {
 
@@ -38,66 +39,37 @@ const mainController = {
 
         // let productToEdit = products.find(product => product.id == req.params.id)
 		// console.log(productToEdit);
-        // res.render('edit',{productToEdit});
+        // res.render('edit',{productToEdit});+
     },
 
     update: (req, res) => {
-
-        // const resultValidation = validationResult(req); 
-
-         // if(resultValidation.errors.length > 0){
-        //     return res.render('anadirProducto', {
-        //     errors: resultValidation.mapped(),
-        //     oldData: req.body
-        //     });
-        // }
-
+        console.log(req.body);
         db.Products.update({
             name: req.body.name,
             price: req.body.price,
-            image: req.body.img,
+            image: req.file ? req.file.filename : null,
             description: req.body.description
-        }, {
-            where: {
+        },{
+            where:{
                 id: req.params.id
             }
         })
+        .then(() => {
+            res.redirect('/');
+        })
 
-       
-
-        // db.Category_products.update({
-        //     name: req.body.category
-        // }, {
-        //     where: 
-        //         db.Products.id = req.params.id
-        // })
-
-        res.redirect('/')
 	},
     create: function(req, res){
-        
-        // const resultValidation = validationResult(req);
-
-        // if(resultValidation.errors.length > 0){
-        //     return res.render('anadirProducto', {
-        //     errors: resultValidation.mapped(),
-        //     oldData: req.body
-        //     });
-        // } 
-
-        const created = db.Products.create({
+        db.Products.create({
             name: req.body.name,
             price: req.body.price,
             image: req.file ? req.file.filename : null,
             description: req.body.description
         })
-            if (created) {
-                res.redirect('/');
-            } else {
-                res.resnder('anadirProducto')
-            }	
+        .then(() => {
+            res.redirect('/');
+        })
         
-
     },
 	destroy : (req, res) => {
 

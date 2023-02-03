@@ -23,9 +23,12 @@
                     <% for(let i=0; i<accesorios.length; i++) { %>
 
                         <div class="cuadritos">
-                            <img class="imagen" src="\images\img\<%=accesorios[i].image%>" alt="<%=accesorios[i].descripcion%>">
-                            <h4>
-                                <%=accesorios[i].descripcionLarga%>
+<<<<<<< HEAD
+=======
+                            <img class="imagen" src="/images/img/<%=accesorios[i].image%>" alt="<%= accesorios[i].name%>">
+                            <h4 class="textoHome">
+                                <%=accesorios[i].description%>
+>>>>>>> 80cc5ac135574873ebcace192697c3c204d70160
                             </h4>
                             <form action="/productos/detalle/<%= accesorios[i].id %>">
                                 <button type="submit">Ver productos</button>

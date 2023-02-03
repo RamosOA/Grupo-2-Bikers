@@ -9,6 +9,8 @@ const userLoggedMiddleware = require('./src/middleware/userLoggedMiddleware')
 
 var mainRouter = require('./src/routes/main.js');
 var productsRouter = require('./src/routes/productos.js');
+var apisRoutesProducts = require('./src/routes/APIs/productosRoutes')
+var apisRoutesUsers = require('./src/routes/APIs/userRoutes')
 
 
 
@@ -23,7 +25,6 @@ app.set('view engine', 'ejs');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookies());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 app.use(session({
@@ -31,17 +32,13 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }))
+app.use(cookies());
 app.use(userLoggedMiddleware)
 
 app.use('/', mainRouter);
 app.use('/productos', productsRouter);
-
-app.use(session({
-    secret: 'secreto',
-    resave: false,
-    saveUninitialized: false
-}))
-app.use(userLoggedMiddleware)
+app.use('/apis', apisRoutesProducts);
+app.use('/apis', apisRoutesUsers);
 
 // // catch 404 and forward to error handler
 // app.use(function(req, res, next) {
