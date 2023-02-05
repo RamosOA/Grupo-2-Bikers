@@ -11,6 +11,7 @@ var mainRouter = require('./src/routes/main.js');
 var productsRouter = require('./src/routes/productos.js');
 var apisRoutesProducts = require('./src/routes/APIs/productosRoutes')
 var apisRoutesUsers = require('./src/routes/APIs/userRoutes')
+var cors = require('cors')
 
 
 
@@ -34,6 +35,7 @@ app.use(session({
 }))
 app.use(cookies());
 app.use(userLoggedMiddleware)
+app.use(cors())
 
 app.use('/', mainRouter);
 app.use('/productos', productsRouter);

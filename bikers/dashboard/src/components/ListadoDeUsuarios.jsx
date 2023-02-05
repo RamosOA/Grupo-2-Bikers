@@ -1,9 +1,11 @@
-function ListaDeUsuario (){
+import ListaUsuarios from "../Hooks/ListaUsuarios";
+
+function ListadoDeUsuarios (){
     return (
         <div>
-        <h1>Hola mundo4</h1>
+        <h1><ListaUsuarios /></h1>
         </div>
     ); 
 }
 
-export default ListaDeUsuario
+export default ListadoDeUsuarios
